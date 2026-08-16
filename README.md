@@ -34,11 +34,7 @@
 | [dsh-ctm](https://github.com/ac0033/dsh-ctm) | dsh 终端插件：CTM（上下文 / 终端管理）· Context & terminal management plugin for dsh |
 | [white-box-explainer](https://github.com/ac0033/white-box-explainer) | 白盒讲解 skill：把项目讲成可复算、可复现、可转述的白盒 · Turn any code/DS/ML project into a white box you can recompute and retell |
 | [learning_assistant_agent](https://github.com/ac0033/learning_assistant_agent) | 开源大学课程的 AI 助教 Agent · AI teaching assistant for open-source university courses |
-| [review-rag-agent](https://github.com/ac0033/review-rag-agent) | RAG 复习 Agent · RAG-powered review agent |
-| [deep-research-reproduction](https://github.com/ac0033/deep-research-reproduction) 🔒 | LangGraph 深度研究 Agent 复现：Scope→Research→Write 三段流水线 |
-| [claw0-reproduction](https://github.com/ac0033/claw0-reproduction) 🔒 | 从零构建生产级 AI Agent 网关 · Agent gateway from scratch |
-| [claude-code-reproduction](https://github.com/ac0033/claude-code-reproduction) 🔒 | 从零复现 Claude Code 的 Agent 底座 · Rebuilding Claude Code's agent harness |
-| [agent-learning-path](https://github.com/ac0033/agent-learning-path) 🔒 | AI Agent 学习路径的系统实践 · Systematic practice along an agent learning path |
+| [review-rag-agent](https://github.com/ac0033/review-rag-agent) | 基于 RAG 的商品审核智能客服：双角色问答、角色可见性隔离、四级递进检索 · RAG-based customer-service agent for product review, with role-based visibility control and 4-stage hybrid retrieval |
 
 ### 📚 开源课程 / Open-source Courses
 
@@ -49,7 +45,6 @@
 | Project | What it does |
 |---|---|
 | [cs61a](https://github.com/ac0033/cs61a) | CS 61A 计算机程序的构造与解释 |
-| [cs61c](https://github.com/ac0033/cs61c) 🔒 | CS 61C 计算机体系结构 |
 | [Data8_sp25](https://github.com/ac0033/Data8_sp25) | Data 8 数据科学基础（sp25） |
 | [sp25-student](https://github.com/ac0033/sp25-student) | Data 100 数据科学原理与技术（sp25） |
 | [sp26-lab](https://github.com/ac0033/sp26-lab) · [materials-sp25](https://github.com/ac0033/materials-sp25) | 实验课与课程材料 |
@@ -71,8 +66,6 @@
 | Project | What it does |
 |---|---|
 | [Resume-Project](https://github.com/ac0033/Resume-Project) | 简历项目 · Resume project |
-| [hello-world](https://github.com/ac0033/hello-world) 🔒 | GitHub 流程练习 · Practicing the GitHub flow |
-| [first-contributions](https://github.com/ac0033/first-contributions) | 开源贡献入门练习 · First steps into open source |
 
 ---
 
