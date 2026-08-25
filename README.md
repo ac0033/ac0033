@@ -9,63 +9,58 @@
 
 ---
 
-## 📦 仓库三大类型 / My Repos in Three Types
+## ✍️ 思考文稿 / Featured Essay
 
-> 我的所有仓库按用途分成三类，每个仓库都打了对应的 topic 标签，点下面的徽章即可按类筛选。
-> All my repos fall into three categories, tagged with topics — click a badge to filter.
-
-<div align="center">
-
-[![AI Tools](https://img.shields.io/badge/🤖_AI_工具-ai--tools-blueviolet)](https://github.com/search?q=user%3Aac0033+topic%3Aai-tools&type=repositories)
-[![Courses](https://img.shields.io/badge/📚_开源课程-course-blue)](https://github.com/search?q=user%3Aac0033+topic%3Acourse&type=repositories)
-[![Projects](https://img.shields.io/badge/🛠️_个人项目-personal--project-orange)](https://github.com/search?q=user%3Aac0033+topic%3Apersonal-project&type=repositories)
-
-</div>
+> **[让 Agent 可靠地干活：从单 Agent 到 AI OS 的一条工程主线](articles/让-Agent-可靠地干活：从单-Agent-到-AI-OS-的一条工程主线.md)**
+>
+> 一篇长文，把下面的 AI agent 项目串成一条递进线：L1 单 Agent 上下文治理 → L2 多 Agent 接缝治理 → L3 超级 Agent → L4 AI OS 系统级治理。读它能看清每个项目在这条线上的位置。
+>
+> *观点和思考：YuanLumen · 撰稿：[llm_wiki](https://github.com/ac0033/llm_wiki) - [writing agentic workflow](https://github.com/ac0033/writing-agent)*
 
 ---
 
-### 🤖 AI 工具 / AI Tools
+## 🛠️ 个人项目 / Personal Projects
 
-> dsh 插件、Agent 工程实践、Claude Code / Kimi Code 的 skills 与 prompt 文件。
-> dsh plugins, agent engineering practice, and skills / prompts for Claude Code & Kimi Code.
+### 🤖 AI Agent
+
+> 按上面文章的主线组织：越靠上越贴近单个 Agent 的内部，越靠下越贴近系统级编排。
 
 | Project | What it does |
 |---|---|
-| [dsh-ctm](https://github.com/ac0033/dsh-ctm) | dsh 终端插件：CTM（上下文 / 终端管理）· Context & terminal management plugin for dsh |
-| [white-box-explainer](https://github.com/ac0033/white-box-explainer) | 白盒讲解 skill：把项目讲成可复算、可复现、可转述的白盒 · Turn any code/DS/ML project into a white box you can recompute and retell |
+| [dsh-ctm](https://github.com/ac0033/dsh-ctm) | **L1 上下文治理** · dsh 终端插件：把上下文变成可见、可编辑、可评分的一等对象 · Context & terminal management plugin for dsh |
+| [agent-memory](https://github.com/ac0033/agent-memory) | **L1 跨会话记忆** · 长期记忆基础设施：脱敏→蒸馏→对账写入管线，三层记忆，MCP / LangGraph / Skill 三种接入 |
+| [writing-agent](https://github.com/ac0033/writing-agent) | **L2 多 Agent 编排** · LangGraph 写作流水线：大纲→资料→初稿→审核→润色，显式图、两段式契约、人工确认节点、断点续跑 |
+| [llm_wiki](https://github.com/ac0033/llm_wiki) | **L2 知识来源** · AI Agent 主题文献知识库：带一手来源的笔记 + MCP 查询/入库/校验/重建索引 |
+| [skills](https://github.com/ac0033/skills) | **工具层插件** · 自研与收录的 Agent skills（含 [white-box-explainer](https://github.com/ac0033/white-box-explainer) 与 [Humanizer-zh](https://github.com/ac0033/Humanizer-zh) 两个 submodule） |
 | [learning_assistant_agent](https://github.com/ac0033/learning_assistant_agent) | 开源大学课程的 AI 助教 Agent · AI teaching assistant for open-source university courses |
-| [review-rag-agent](https://github.com/ac0033/review-rag-agent) | 基于 RAG 的商品审核智能客服：双角色问答、角色可见性隔离、四级递进检索 · RAG-based customer-service agent for product review, with role-based visibility control and 4-stage hybrid retrieval |
+| [review-rag-agent](https://github.com/ac0033/review-rag-agent) | 基于 RAG 的商品审核智能客服：双角色问答、角色可见性隔离、四级递进检索 · RAG-based customer-service agent with role-based visibility and 4-stage hybrid retrieval |
 
-### 📚 开源课程 / Open-source Courses
+### 📊 数据科学 / Data Science
 
-> 公开课作业、教材配套代码与学习笔记。Coursework, textbook companion code, and study notes.
+| Project | What it does |
+|---|---|
+| [Resume-Project](https://github.com/ac0033/Resume-Project) | 数据分析项目集：Cookie Cats 移动 App 的 A/B 测试分析、美团商分大赛优惠券投放分析 |
 
-**伯克利课程作业 / UC Berkeley Coursework**
+---
+
+## 📚 开源课程 / Open-source Courses
+
+> 公开课作业、实验与学习材料。Coursework, labs, and course materials.
+
+**UC Berkeley**
 
 | Project | What it does |
 |---|---|
 | [cs61a](https://github.com/ac0033/cs61a) | CS 61A 计算机程序的构造与解释 |
-| [Data8_sp25](https://github.com/ac0033/Data8_sp25) | Data 8 数据科学基础（sp25） |
+| [sp26-lab](https://github.com/ac0033/sp26-lab) | CS 61C 计算机体系结构配套实验课（sp26） |
+| [Data8_sp25](https://github.com/ac0033/Data8_sp25) · [materials-sp25](https://github.com/ac0033/materials-sp25) | Data 8 数据科学基础：作业与课程材料（sp25） |
 | [sp25-student](https://github.com/ac0033/sp25-student) | Data 100 数据科学原理与技术（sp25） |
-| [sp26-lab](https://github.com/ac0033/sp26-lab) · [materials-sp25](https://github.com/ac0033/materials-sp25) | 实验课与课程材料 |
 
-**教材与公开课 / Textbooks & Course Materials**
-
-| Project | What it does |
-|---|---|
-| [introtodeeplearning](https://github.com/ac0033/introtodeeplearning) | MIT 6.S191 深度学习导论实验材料 |
-| [handson-ml3](https://github.com/ac0033/handson-ml3) | 《Hands-On Machine Learning》第 3 版 notebook |
-| [pydata-book](https://github.com/ac0033/pydata-book) · [PythonDataScienceHandbook](https://github.com/ac0033/PythonDataScienceHandbook) | Python 数据分析两本经典配套材料 |
-| [fpp3](https://github.com/ac0033/fpp3) · [fpp3-python](https://github.com/ac0033/fpp3-python) | 《Forecasting: Principles and Practice》第 3 版（R / Python） |
-| [Book4_Power-of-Matrix](https://github.com/ac0033/Book4_Power-of-Matrix) · [Book6_First-Course-in-Data-Science](https://github.com/ac0033/Book6_First-Course-in-Data-Science) | 鸢尾花书《矩阵力量》《数据有道》 |
-| [Python-100-Days](https://github.com/ac0033/Python-100-Days) · [Py](https://github.com/ac0033/Py) | Python 100 天 · Python 3.11 官方手册解析 |
-| [Operating-Systems-Three-Easy-Pieces-NOTES](https://github.com/ac0033/Operating-Systems-Three-Easy-Pieces-NOTES) | 《操作系统导论》(OSTEP) 笔记与习题答案 |
-
-### 🛠️ 个人项目 / Personal Projects
+**MIT**
 
 | Project | What it does |
 |---|---|
-| [Resume-Project](https://github.com/ac0033/Resume-Project) | 简历项目 · Resume project |
+| [introtodeeplearning](https://github.com/ac0033/introtodeeplearning) | 6.S191 深度学习导论实验材料 |
 
 ---
 
