@@ -1,78 +1,59 @@
 <div align="center">
 
-# Welcome to YuanLumen's Garage 🛠️
+# YuanLumen's Garage 🛠️
 
-**学开源课程 · 造 AI 工具 · 攒个人项目**
-**Learning in public · Building AI tools · Shipping side projects**
-
-</div>
-
----
-
-## ✍️ 思考文稿 / Featured Essay
-
-> **[让 Agent 可靠地干活：从单 Agent 到 AI OS 的一条工程主线](articles/让-Agent-可靠地干活：从单-Agent-到-AI-OS-的一条工程主线.md)**
->
-> 一篇长文，把下面的 AI agent 项目串成一条递进线：L1 单 Agent 上下文治理 → L2 多 Agent 接缝治理 → L3 超级 Agent → L4 AI OS 系统级治理。读它能看清每个项目在这条线上的位置。
->
-> *观点和思考：YuanLumen · 撰稿：[llm_wiki](https://github.com/ac0033/llm_wiki) - [writing agentic workflow](https://github.com/ac0033/writing-agent)*
-
----
-
-## 🛠️ 个人项目 / Personal Projects
-
-### 🤖 AI Agent
-
-> 按上面文章的主线组织：越靠上越贴近单个 Agent 的内部，越靠下越贴近系统级编排。
-
-| Project | What it does |
-|---|---|
-| [dsh-ctm](https://github.com/ac0033/dsh-ctm) | **L1 上下文治理** · dsh 终端插件：把上下文变成可见、可编辑、可评分的一等对象 · Context & terminal management plugin for dsh |
-| [agent-memory](https://github.com/ac0033/agent-memory) | **L1 跨会话记忆** · 长期记忆基础设施：脱敏→蒸馏→对账写入管线，三层记忆，MCP / LangGraph / Skill 三种接入 |
-| [writing-agent](https://github.com/ac0033/writing-agent) | **L2 多 Agent 编排** · LangGraph 写作流水线：大纲→资料→初稿→审核→润色，显式图、两段式契约、人工确认节点、断点续跑 |
-| [llm_wiki](https://github.com/ac0033/llm_wiki) | **L2 知识来源** · AI Agent 主题文献知识库：带一手来源的笔记 + MCP 查询/入库/校验/重建索引 |
-| [skills](https://github.com/ac0033/skills) | **工具层插件** · 自研与收录的 Agent skills（含 [white-box-explainer](https://github.com/ac0033/white-box-explainer) 与 [Humanizer-zh](https://github.com/ac0033/Humanizer-zh) 两个 submodule） |
-| [learning_assistant_agent](https://github.com/ac0033/learning_assistant_agent) | 开源大学课程的 AI 助教 Agent · AI teaching assistant for open-source university courses |
-| [review-rag-agent](https://github.com/ac0033/review-rag-agent) | 基于 RAG 的商品审核智能客服：双角色问答、角色可见性隔离、四级递进检索 · RAG-based customer-service agent with role-based visibility and 4-stage hybrid retrieval |
-
-### 📊 数据科学 / Data Science
-
-| Project | What it does |
-|---|---|
-| [Resume-Project](https://github.com/ac0033/Resume-Project) | 数据分析项目集：Cookie Cats 移动 App 的 A/B 测试分析、美团商分大赛优惠券投放分析 |
-
----
-
-## 📚 开源课程 / Open-source Courses
-
-> 公开课作业、实验与学习材料。Coursework, labs, and course materials.
-
-**UC Berkeley**
-
-| Project | What it does |
-|---|---|
-| [cs61a](https://github.com/ac0033/cs61a) | CS 61A 计算机程序的构造与解释 |
-| [sp26-lab](https://github.com/ac0033/sp26-lab) | CS 61C 计算机体系结构配套实验课（sp26） |
-| [Data8_sp25](https://github.com/ac0033/Data8_sp25) · [materials-sp25](https://github.com/ac0033/materials-sp25) | Data 8 数据科学基础：作业与课程材料（sp25） |
-| [sp25-student](https://github.com/ac0033/sp25-student) | Data 100 数据科学原理与技术（sp25） |
-
-**MIT**
-
-| Project | What it does |
-|---|---|
-| [introtodeeplearning](https://github.com/ac0033/introtodeeplearning) | 6.S191 深度学习导论实验材料 |
-
----
-
-## 🛠 Tech Stack
-
-<div align="center">
-
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
-![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![LLM Engineering](https://img.shields.io/badge/-LLM_Engineering-FF6F00?style=flat)
-![Claude Code](https://img.shields.io/badge/-Claude_Code-D97757?style=flat)
-![Agent Skills](https://img.shields.io/badge/-Agent_Skills-8A2BE2?style=flat)
+**学开源课程 · 造 AI 工具 · 写下实践与思考**  
+Learning in public · Building AI tools · Writing about what I learn
 
 </div>
+
+这里收录我的公开项目、课程实践和文章。近期围绕 Agent 的上下文、记忆、知识来源与写作流程持续开发，也用数据分析项目练习从数据走向判断。
+
+## 文章 / Writing
+
+- **[AI 时代普通人的价值：从执行任务到解决问题](articles/2026-09-08-AI时代普通人的价值：从执行任务到解决问题-60be066b72dd.md)**：关于 AI 时代个人价值创造的思考。
+- **[让 Agent 可靠地干活：从单 Agent 到 AI OS 的一条工程主线](articles/让-Agent-可靠地干活：从单-Agent-到-AI-OS-的一条工程主线.md)**：从单 Agent 的上下文管理，到多 Agent 协作与系统层面的治理。
+
+观点与材料整理：YuanLumen。写作工具：[writing-agent](https://github.com/ac0033/writing-agent) · 来源积累：[llm_wiki](https://github.com/ac0033/llm_wiki)。
+
+## AI 工具 / AI Projects
+
+| 项目 | 当前内容 |
+|---|---|
+| [dsh-ctm](https://github.com/ac0033/dsh-ctm) | DeepSeek Harness 上下文管理插件：查看上下文与 token 使用，编辑、回退和快照恢复；实际生效需显式开启 |
+| [agent-memory](https://github.com/ac0033/agent-memory) | 长期、工作、短期三层记忆；支持人工复核、宿主蒸馏、一致性检查，以及 MCP / LangGraph / Skill 接入 |
+| [writing-agent](https://github.com/ac0033/writing-agent) | 从主题提炼、大纲、搜证到写作与最终核验；支持断点续跑，文章确认保存与 GitHub 发布分别确认 |
+| [llm_wiki](https://github.com/ac0033/llm_wiki) | Markdown 文献知识库：来源抓取、幂等入库、人工复核、索引与校验；接收写作产生的来源证据 |
+| [skills](https://github.com/ac0033/skills) | 汇报、自然写作、结构化写作与项目讲解的技能集合，包含源码、示例和检查程序 |
+| [learning_assistant_agent](https://github.com/ac0033/learning_assistant_agent) | 面向开源课程的 AI 助教：课程 PDF 上传、混合检索、中文讲解与英文术语保留 |
+| [review-rag-agent](https://github.com/ac0033/review-rag-agent) | 商品审核场景的 RAG 问答：角色可见性过滤、混合检索、重排和索引同步 |
+
+### 技能入口 / Skills
+
+| 技能 | 用途 |
+|---|---|
+| [clear-reporting](https://github.com/ac0033/skills/tree/main/clear-reporting) | 把已有结果整理成有依据、能追问的汇报，配套材料与数字检查 |
+| [human-writing](https://github.com/ac0033/skills/tree/main/human-writing) | 中文写作与修订规范，附文本检查脚本 |
+| [structured-writing](https://github.com/ac0033/skills/tree/main/structured-writing) | 组织文章结构、论证与量化表达 |
+| [white-box-explainer](https://github.com/ac0033/white-box-explainer) | 结合真实代码和数据，讲清项目原理与复算过程 |
+| [Humanizer-zh](https://github.com/ac0033/Humanizer-zh) | 中文 AI 写作去痕技能的个人 fork，保留上游来源说明 |
+
+## 数据分析 / Data Analysis
+
+[Resume-Project](https://github.com/ac0033/Resume-Project) 收录三个 Notebook：Cookie Cats A/B 测试、优惠券使用率预测、RFM 与 K-Means 用户分层。项目首页提供各分析入口及复现所需的数据说明。
+
+## 公开课程实践 / Coursework
+
+| 课程 | 仓库 | 内容 |
+|---|---|---|
+| UC Berkeley CS 61A | [cs61a](https://github.com/ac0033/cs61a) | Python、Scheme、讨论与项目练习 |
+| UC Berkeley CS 61C | [sp26-lab](https://github.com/ac0033/sp26-lab) | Spring 2026 的 C、RISC-V 与数字电路实验材料 |
+| UC Berkeley Data 8 | [Data8_sp25](https://github.com/ac0033/Data8_sp25) | Spring 2025 的作业、实验、讲义与三个课程项目 |
+| UC Berkeley Data 8 | [materials-sp25](https://github.com/ac0033/materials-sp25) | 课程公开材料的 fork 与复习目录 |
+| UC Berkeley Data 100 | [sp25-student](https://github.com/ac0033/sp25-student) | Spring 2025 的讲义、数据和项目材料索引 |
+
+各仓库保留课程材料的来源与版权说明；具体内容和运行方法见对应 README。
+
+## 常用技术 / Tools
+
+Python · Jupyter · TypeScript · LangGraph · MCP · RAG · Agent Skills
