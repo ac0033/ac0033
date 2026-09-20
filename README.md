@@ -14,19 +14,16 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 
 ---
 
-围绕 Agent 的上下文、记忆、知识与写作流程构建工具，也探索 AI 在文档阅读、课程学习和数据科学中的应用。这里整理公开项目、课程实践与文章；尚未发布的项目先保留名称，后续补充。
-
-<details>
-<summary><b>✍️ 文章与思考 · Writing</b></summary>
+## ✍️ 文章与思考 · Writing
 
 - **[AI 时代普通人的价值：从执行任务到解决问题](articles/2026-09-08-AI时代普通人的价值：从执行任务到解决问题-60be066b72dd.md)**：关于 AI 时代个人价值创造的思考。
 - **[让 Agent 可靠地干活：从单 Agent 到 AI OS 的一条工程主线](articles/让-Agent-可靠地干活：从单-Agent-到-AI-OS-的一条工程主线.md)**：从单 Agent 上下文管理，到多 Agent 协作与系统治理。
 
 观点与材料整理：YuanLumen。写作工具：[writing-agent](https://github.com/ac0033/writing-agent) · 来源积累：[llm-wiki](https://github.com/ac0033/llm_wiki)。
 
-</details>
-
 ---
+
+围绕 Agent 的上下文、记忆、知识与写作流程构建工具，也探索 AI 在文档阅读、课程学习和数据科学中的应用。这里整理公开项目、课程实践与文章；尚未发布的项目先保留名称，后续补充。
 
 <a id="ai-tools"></a>
 
