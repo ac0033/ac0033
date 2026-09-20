@@ -16,6 +16,18 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 
 围绕 Agent 的上下文、记忆、知识与写作流程构建工具，也探索 AI 在文档阅读、课程学习和数据科学中的应用。这里整理公开项目、课程实践与文章；尚未发布的项目先保留名称，后续补充。
 
+<details>
+<summary><b>✍️ 文章与思考 · Writing</b></summary>
+
+- **[AI 时代普通人的价值：从执行任务到解决问题](articles/2026-09-08-AI时代普通人的价值：从执行任务到解决问题-60be066b72dd.md)**：关于 AI 时代个人价值创造的思考。
+- **[让 Agent 可靠地干活：从单 Agent 到 AI OS 的一条工程主线](articles/让-Agent-可靠地干活：从单-Agent-到-AI-OS-的一条工程主线.md)**：从单 Agent 上下文管理，到多 Agent 协作与系统治理。
+
+观点与材料整理：YuanLumen。写作工具：[writing-agent](https://github.com/ac0033/writing-agent) · 来源积累：[llm-wiki](https://github.com/ac0033/llm_wiki)。
+
+</details>
+
+---
+
 <a id="ai-tools"></a>
 
 ## 🛠️ AI 工具
@@ -60,7 +72,7 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 | **PDFtranslator** | — | 🚧 待更新中 |
 | **datascience_platform** | — | 🚧 待更新中 |
 | **ai_tutor** | — | 🚧 待更新中 |
-| **[learning_assistant_agent](https://github.com/ac0033/learning_assistant_agent)** | 开源课程 AI 助教；课程 PDF 上传、混合检索、中文讲解与英文术语保留 | 已公开 |
+| **[learning_assistant_agent](https://github.com/ac0033/learning_assistant_agent)** | 开源课程 AI 助教；课程 PDF 上传、混合检索、中文讲解与英文术语保留 | 即将下线 |
 
 <sub>“待更新中”仅为项目名占位；公开后补充介绍与仓库入口。</sub>
 
@@ -76,8 +88,6 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 |---|---|---|
 | **[wine-quality](https://github.com/ac0033/wine-quality)** | 根据 11 项理化指标预测葡萄酒 quality 评分 | 红酒与白酒分别训练随机森林；包含数据核验、探索分析、模型比较、最终评估、可解释性与模型交付记录 |
 
-项目入口：[分析与建模过程](https://github.com/ac0033/wine-quality/tree/main/steps) · [模型交付清单](https://github.com/ac0033/wine-quality/tree/main/delivery)
-
 ---
 
 <a id="open-courses"></a>
@@ -86,30 +96,25 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 
 公开课自学记录、个人作业实现与课程材料整理。按学校与课程展示，具体完成情况见各仓库。
 
-| 学校 | 课程 | 仓库与内容 |
-|---|---|---|
-| **UC Berkeley** | CS 61A · 计算机程序的构造与解释 | [cs61a](https://github.com/ac0033/cs61a) · Python、Scheme、讨论与项目练习 |
-| UC Berkeley | CS 61C · 计算机体系结构 | [sp26-lab](https://github.com/ac0033/sp26-lab) · Spring 2026 的 C、RISC-V 与数字电路实验 |
-| UC Berkeley | Data 8 · 数据科学基础 | [course-data8](https://github.com/ac0033/course-data8) · 作业、实验与课程项目；[materials-sp25](https://github.com/ac0033/materials-sp25) · 课程材料 fork |
-| UC Berkeley | Data 100 · 数据科学原理与技术 | [course-data100](https://github.com/ac0033/course-data100) · Spring 2025 讲义、数据与项目配套材料 |
-| **Stanford** | CS229 · 机器学习 | [course-cs229](https://github.com/ac0033/course-cs229) · 2020 Summer 问题集，LaTeX 数学推导与 Python 实现 |
-| **University of Michigan** | EECS 498-007 / 598-005 · 深度学习计算机视觉 | [course-eecs498-umich](https://github.com/ac0033/course-eecs498-umich) · A1–A6 作业实现，覆盖分类、检测、图像描述、Transformer 与生成模型 |
-| **MIT** | 6.S191 · 深度学习导论 | [introtodeeplearning](https://github.com/ac0033/introtodeeplearning) · 课程实验 fork，含 PyTorch 音乐生成实践 |
-| **CMU** | Introduction to Deep Learning | [CMU-IDeeL.github.io](https://github.com/ac0033/CMU-IDeeL.github.io) · 课程网站与历年材料的个人副本 |
+<table>
+<thead>
+<tr><th>学校</th><th>课程</th><th>仓库与内容</th></tr>
+</thead>
+<tbody>
+<tr><td rowspan="4"><strong>UCB</strong></td><td>CS 61A · 计算机程序的构造与解释</td><td><a href="https://github.com/ac0033/cs61a">cs61a</a> · Python、Scheme、讨论与项目练习</td></tr>
+<tr><td>CS 61C · 计算机体系结构</td><td><a href="https://github.com/ac0033/sp26-lab">sp26-lab</a> · Spring 2026 的 C、RISC-V 与数字电路实验</td></tr>
+<tr><td>Data 8 · 数据科学基础</td><td><a href="https://github.com/ac0033/course-data8">course-data8</a> · 作业、实验与课程项目；<a href="https://github.com/ac0033/materials-sp25">materials-sp25</a> · 课程材料 fork</td></tr>
+<tr><td>Data 100 · 数据科学原理与技术</td><td><a href="https://github.com/ac0033/course-data100">course-data100</a> · Spring 2025 讲义、数据与项目配套材料</td></tr>
+<tr><td><strong>Stanford</strong></td><td>CS229 · 机器学习</td><td><a href="https://github.com/ac0033/course-cs229">course-cs229</a> · 2020 Summer 问题集，LaTeX 数学推导与 Python 实现</td></tr>
+<tr><td><strong>MIT</strong></td><td>6.S191 · 深度学习导论</td><td><a href="https://github.com/ac0033/introtodeeplearning">introtodeeplearning</a> · 课程实验 fork，含 PyTorch 音乐生成实践</td></tr>
+<tr><td><strong>CMU</strong></td><td>Introduction to Deep Learning</td><td><a href="https://github.com/ac0033/CMU-IDeeL.github.io">CMU-IDeeL.github.io</a> · 课程网站与历年材料的个人副本</td></tr>
+<tr><td><strong>University of Michigan</strong></td><td>EECS 498-007 / 598-005 · 深度学习计算机视觉</td><td><a href="https://github.com/ac0033/course-eecs498-umich">course-eecs498-umich</a> · A1–A6 作业实现，覆盖分类、检测、图像描述、Transformer 与生成模型</td></tr>
+</tbody>
+</table>
 
 <sub>个人学习仓库不代表课程官方；课程材料、第三方代码与个人实现的来源和许可见各仓库说明。</sub>
 
 ---
-
-<details>
-<summary><b>✍️ 文章与思考 · Writing</b></summary>
-
-- **[AI 时代普通人的价值：从执行任务到解决问题](articles/2026-09-08-AI时代普通人的价值：从执行任务到解决问题-60be066b72dd.md)**：关于 AI 时代个人价值创造的思考。
-- **[让 Agent 可靠地干活：从单 Agent 到 AI OS 的一条工程主线](articles/让-Agent-可靠地干活：从单-Agent-到-AI-OS-的一条工程主线.md)**：从单 Agent 上下文管理，到多 Agent 协作与系统治理。
-
-观点与材料整理：YuanLumen。写作工具：[writing-agent](https://github.com/ac0033/writing-agent) · 来源积累：[llm-wiki](https://github.com/ac0033/llm_wiki)。
-
-</details>
 
 <div align="center">
 <sub>持续学习，持续构建，记录可复查的实践。</sub>
