@@ -16,10 +16,10 @@
 
 | Secret | 用途 | 权限 |
 |---|---|---|
-| `PROFILE_PAT` | `collect` 读取全部仓库、推送分支、建 PR | fine-grained PAT，授权 `ac0033/ac0033` 的 **Contents: Read and write**；若要读私有仓库还需 **Metadata: Read**（对所有仓库） |
+| `PROFILE_PAT` | 仅 `collect` 读取**全部仓库列表** | fine-grained PAT，**Repository access: All repositories**，**Permissions: Metadata: Read-only** |
 | `ANTHROPIC_API_KEY` | 方案 C 的模型调用 | 也可改用 `DEEPSEEK_API_KEY` / `OPENAI_API_KEY` 等，并在 `ai-update.yml` 中替换环境变量 |
 
-> `GITHUB_TOKEN`（默认）只能访问当前仓库，读不到你其他仓库，所以 `collect` 必须使用 PAT。
+> `PROFILE_PAT` 只需最小权限：因为 `GITHUB_TOKEN` 读不到你其他仓库，`collect` 才需要它；而提交、推送、开 PR 都使用仓库自带的 `GITHUB_TOKEN`（仅限本仓库）。
 
 ## 跨仓库近实时（可选）
 

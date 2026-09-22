@@ -15,6 +15,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 concurrency:
   group: profile-ai-update
@@ -69,8 +70,8 @@ jobs:
       - name: 开 PR
         if: steps.gate.outputs.drift == 'true'
         env:
-          # 用 PAT 推送分支，PR 才会触发 CI
-          GH_TOKEN: ${{ secrets.PROFILE_PAT }}
+          # 用仓库自带的 GITHUB_TOKEN（仅限本仓库）即可，无需 PAT
+          GH_TOKEN: ${{ github.token }}
         run: |
           if [ -z "$(git status --porcelain)" ]; then
             echo "Agent 未产生变更"
