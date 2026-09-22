@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-22T10:24:54.285Z",
+  "generatedAt": "2026-09-22T11:24:25.469Z",
   "owner": "ac0033",
-  "count": 19,
+  "count": 20,
   "repos": {
     "agent-memory": {
       "name": "agent-memory",
@@ -49,6 +49,13 @@
       "name": "cs61a",
       "url": "https://github.com/ac0033/cs61a",
       "description": "UC Berkeley CS 61A 个人课程实践：Python、Scheme、讨论、作业与 Hog / Cats / Ants 项目",
+      "archived": false,
+      "fork": false
+    },
+    "dsflow": {
+      "name": "dsflow",
+      "url": "https://github.com/ac0033/dsflow",
+      "description": "数据科学项目全周期追踪平台：每一步的计划、审批、数据变化、讲解与验收都能在网页上检查；agent 通过协议 / MCP / 命令行 / 终端客户端 / Skill 接入（公开预览）",
       "archived": false,
       "fork": false
     },

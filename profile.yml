@@ -28,6 +28,7 @@ header:
 # 状态枚举 → 展示文本。render 只接受这里的 key，Agent 也禁止自造状态。
 status:
   active: "已公开"
+  preview: "🔍 公开预览"
   wip: "🚧 待更新中"
   planned: "🔒 未公开"
   archived: "📦 已归档"
@@ -87,11 +88,11 @@ sections:
         rows:
           - [{ repo: review-rag-agent }, "商品审核问答；角色可见性过滤、混合检索、重排与索引同步", { status: active }]
           - [{ label: "PDFtranslator", link: false }, "—", { status: wip }]
-          - [{ label: "datascience_platform", link: false }, "—", { status: wip }]
+          - [{ repo: dsflow }, "数据科学项目全周期追踪平台：每一步的计划、审批、数据变化、讲解与验收都能在网页上检查；agent 通过协议 / MCP / 命令行 / 终端客户端 / Skill 接入", { status: preview }]
           - [{ label: "ai_tutor", link: false }, "—", { status: wip }]
           - [{ repo: learning_assistant_agent }, "开源课程 AI 助教；课程 PDF 上传、混合检索、中文讲解与英文术语保留", { status: deprecated }]
       - type: note
-        value: "<sub>“待更新中”仅为项目名占位；公开后补充介绍与仓库入口。</sub>"
+        value: "<sub>“公开预览”：代码与功能已公开，可在本机安装试用；多用户登录与服务器部署尚未完成，暂不提供在线服务。“待更新中”仅为项目名占位；公开后补充介绍与仓库入口。</sub>"
 
   - id: data-science
     heading: "📊 数据科学项目"
