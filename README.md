@@ -34,9 +34,9 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 | 项目 | 解决什么问题 | 主要内容 |
 |---|---|---|
 | **[dsh-ctm](https://github.com/ac0033/dsh-ctm)** | 看清并管理 Agent 上下文 | DeepSeek Harness 插件；上下文可视化、token 用量、编辑与回退、快照恢复 |
-| **[agent-memory](https://github.com/ac0033/agent-memory)** | 跨会话保留经验与任务状态 | 长期 / 工作 / 短期记忆；脱敏、复核、遗忘、原文回溯；MCP / LangGraph / Skill 接入 |
-| **[writing-agent](https://github.com/ac0033/writing-agent)** | 从主题与材料走向可核查的文章 | 主题提炼 → 大纲 → 搜证 → 写作 → 审核；断点续跑、人工确认与来源记录 |
-| **[llm-wiki](https://github.com/ac0033/llm_wiki)** | 为研究与写作积累可追溯的来源 | Markdown / Obsidian 文献知识库；来源入库、复核、索引、校验与 MCP 查询 |
+| **[agent-memory](https://github.com/ac0033/agent-memory)** | 让 agent 跨会话记住偏好、约定与踩过的坑 | 证据锚定记忆：以原话为证据、读取只组织不裁决；长期 / 工作 / 短期三层 + 写入评价门；LoCoMo 42:33、60 题 58/60；MCP / Python / Skill 接入 |
+| **[writing-agent](https://github.com/ac0033/writing-agent)** | 从主题与材料走向可核查的文章 | v2 写作图：摘要确认 → 研究 → 框架 → 写作 → 审核 → 润色；版本绑定与人工确认；CLI 额度检查、模型回退、MCP 接入 |
+| **[llm-wiki](https://github.com/ac0033/llm_wiki)** | 为研究与写作积累可追溯的来源 | AI Agent（Agent Harness）文献知识库；raw 原文 / wiki 页面 / registry 登记三层；幂等入库、分页抓取、人工复核、周更评分；Claude 生成 + Codex 独立核验 |
 | **[skills](https://github.com/ac0033/skills)** | 把常用工作方法沉淀为 Agent 技能 | 系统构思、讲解、汇报与中文写作；按任务提供规则、示例和检查程序 |
 
 <sub>llm-wiki 对应仓库名 `llm_wiki`。</sub>
@@ -67,7 +67,7 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 |---|---|---|
 | **[review-rag-agent](https://github.com/ac0033/review-rag-agent)** | 商品审核问答；角色可见性过滤、混合检索、重排与索引同步 | 已公开 |
 | **PDFtranslator** | — | 🚧 待更新中 |
-| **[dsflow](https://github.com/ac0033/dsflow)** | 数据科学项目全周期追踪平台：每一步的计划、审批、数据变化、讲解与验收都能在网页上检查；agent 通过协议 / MCP / 命令行 / 终端客户端 / Skill 接入 | 🔍 公开预览 |
+| **[dsflow](https://github.com/ac0033/dsflow)** | 数据科学项目全周期追踪平台（类似 MLflow + DVC，补状态与认知追踪）：计划、审批、数据变化、讲解与验收在网页上可检查；只读接入，项目文件为唯一事实来源；agent 经协议 / MCP / 命令行 / 终端 / Skill 接入 | 🔍 公开预览 |
 | **ai_tutor** | — | 🚧 待更新中 |
 | **[learning_assistant_agent](https://github.com/ac0033/learning_assistant_agent)** | 开源课程 AI 助教；课程 PDF 上传、混合检索、中文讲解与英文术语保留 | 即将下线 |
 
