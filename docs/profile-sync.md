@@ -6,7 +6,7 @@
 |---|---|---|---|
 | A 自动 | `sync-auto.yml` | 机械变更（归档状态等）直接提交 | 每天定时 / 手动 / 跨仓库事件 |
 | B 提醒 | `remind.yml` | 有漂移就开 / 更新 Issue | 每天定时 / 手动 / 跨仓库事件 |
-| C AI Agent | `ai-update.yml` | Agent 改 `profile.yml` 并开 PR | 手动 / 跨仓库事件 |
+| C AI Agent | 本地 pi（`ai-update.yml` 默认禁用） | 按漂移更新 `profile.yml` | 需要时手动 |
 
 三者可同时开启：`remind` 负责提醒，`sync-auto` 顺手处理机械项，`ai-update` 在需要时产出可审阅的 PR。
 
@@ -49,6 +49,28 @@ npm run check
 ```
 
 第一次提交前请先 `npm run collect && npm run diff`，确认漂移符合预期。
+
+## 本地让 Agent 更新（方案 C）
+
+`ai-update.yml` 默认在 GitHub 上禁用（避免没有模型 key 时误触发）。需要时在本地执行：
+
+```bash
+npm ci
+npm run collect
+npm run diff
+```
+
+然后在仓库根目录启动 pi，对它说：
+
+> 读 `scripts/AGENT_TASK.md`，根据 `drift.json` 更新 `profile.yml`，然后运行 `npm run render && npm run check`。
+
+完成并确认无误后提交：
+
+```bash
+git add -A && git commit -m "chore(profile): sync by agent" && git push
+```
+
+`drift.md` 是给人看的清单，`drift.json` 是给 Agent 看的结构化数据。想恢复 CI 版本：`gh workflow enable "AI profile update"` 并配置 `ANTHROPIC_API_KEY`。
 
 ## 注意
 
