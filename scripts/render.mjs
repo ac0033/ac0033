@@ -192,7 +192,8 @@ const doc = loadProfile();
 const rendered = render(doc);
 
 if (CHECK) {
-  const current = existsSync(TARGET) ? readFileSync(TARGET, "utf8") : "";
+  // 归一化换行，避免 Windows 检出 CRLF 时误报不一致
+  const current = existsSync(TARGET) ? readFileSync(TARGET, "utf8").replace(/\r\n/g, "\n") : "";
   if (current === rendered) {
     console.log("render: README.md 与 profile.yml 一致 ✓");
     process.exit(0);

@@ -10,6 +10,8 @@
     "apply": "node scripts/apply.mjs",
     "render": "node scripts/render.mjs",
     "check": "node scripts/render.mjs --check",
+    "jev:triage": "node scripts/jev-triage.mjs",
+    "jev:verify": "node scripts/jev-verify.mjs",
     "sync": "node scripts/collect.mjs && node scripts/diff.mjs && node scripts/apply.mjs && node scripts/render.mjs"
   },
   "dependencies": {

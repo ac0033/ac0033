@@ -4,3 +4,8 @@ data/repos.latest.json
 drift.json
 drift.md
 .drift-body.md
+# TypeSafe runtime artifacts
+jev.triage.payload.json
+jev.triage.json
+jev.verify.payload.json
+jev.verify.json
