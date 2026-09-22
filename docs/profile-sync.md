@@ -53,5 +53,5 @@ npm run check
 ## 注意
 
 - 定时工作流在仓库长期无活动后会被 GitHub 停用，`sync-auto.yml` 每月写一次 `data/last-scan.txt` 保活。
-- `data/repos.json` 是公开仓库快照，会提交；`data/repos.full.json` 含私有仓库，已 gitignore，不要提交。
+- `data/repos.json` 是公开仓库快照，会提交；`data/repos.latest.json` 含私有仓库，已 gitignore，不要提交。
 - `README.md` 禁止手改，`ci.yml` 会在 PR / push 时校验一致性。

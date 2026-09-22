@@ -35,7 +35,7 @@ if (!current) {
   console.error("diff: 缺少 data/repos.json，请先运行 npm run collect");
   process.exit(1);
 }
-const full = readJson(join(ROOT, "data", "repos.full.json"));
+const full = readJson(join(ROOT, "data", "repos.latest.json"));
 const previous = gitShow("data/repos.json");
 
 const pub = current.repos ?? {};

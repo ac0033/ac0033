@@ -66,10 +66,21 @@ try {
 }
 
 const all = JSON.parse(raw).map(normalize);
-const pub = all.filter((r) => !r.private);
-const reposObj = byName(pub);
+// 首页仓库自身不属于展示项目，且其 pushedAt 会因本流程的提交而反复变化，故排除。
+const publicProjects = all.filter((r) => !r.private && r.name !== owner);
 
-// 仓库事实未变时保留旧快照与时间戳，避免每天产生无意义提交。
+// 提交的快照只保留“漂移检测需要且稳定”的字段，
+// 避免 pushedAt / stars 等高频字段造成每天无意义提交。
+const stable = (r) => ({
+  name: r.name,
+  url: r.url,
+  description: r.description,
+  archived: r.archived,
+  fork: r.fork,
+});
+const reposObj = {};
+for (const r of [...publicProjects].sort((a, b) => a.name.localeCompare(b.name))) reposObj[r.name] = stable(r);
+
 const PUBLIC = join(ROOT, "data", "repos.json");
 const existing = existsSync(PUBLIC) ? JSON.parse(readFileSync(PUBLIC, "utf8")) : null;
 const changed = !existing || JSON.stringify(existing.repos) !== JSON.stringify(reposObj);
@@ -78,13 +89,14 @@ const generatedAt = changed ? new Date().toISOString() : existing.generatedAt;
 mkdirSync(join(ROOT, "data"), { recursive: true });
 writeFileSync(
   PUBLIC,
-  JSON.stringify({ generatedAt, owner, count: pub.length, repos: reposObj }, null, 2) + "\n",
+  JSON.stringify({ generatedAt, owner, count: publicProjects.length, repos: reposObj }, null, 2) + "\n",
   "utf8",
 );
+// 完整事实（含 pushedAt/语言/stars/私有）不提交，仅供运行期使用。
 writeFileSync(
-  join(ROOT, "data", "repos.full.json"),
-  JSON.stringify({ generatedAt, owner, repos: byName(all) }, null, 2) + "\n",
+  join(ROOT, "data", "repos.latest.json"),
+  JSON.stringify({ generatedAt: new Date().toISOString(), owner, repos: byName(all) }, null, 2) + "\n",
   "utf8",
 );
 
-console.log(`collect: 公开 ${pub.length} 个仓库，全部 ${all.length} 个（含私有）${changed ? "，快照已更新" : "，快照无变化"}`);
+console.log(`collect: 公开项目 ${publicProjects.length} 个，全部仓库 ${all.length} 个（含私有）${changed ? "，快照已更新" : "，快照无变化"}`);

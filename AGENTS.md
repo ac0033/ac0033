@@ -7,7 +7,7 @@
 1. **禁止直接编辑 `README.md`**。它由 `profile.yml` 通过 `node scripts/render.mjs` 生成。
 2. 修改分类、表述、状态、文章列表 → 编辑 `profile.yml`，然后 `npm run render`。
 3. `status` 只能取 `profile.yml` 里 `status` 枚举定义的 key（active / wip / planned / archived / deprecated）。
-4. **不得写入私有仓库信息**。`data/repos.json` 只含公开仓库；`data/repos.full.json` 含私有仓库，已被 gitignore，仅用于本地判断。
+4. **不得写入私有仓库信息**。`data/repos.json` 只含公开仓库；`data/repos.latest.json` 含私有仓库，已被 gitignore，仅用于本地判断。
 5. 提交前必须 `npm run check` 通过（校验 README.md 与 profile.yml 一致）。
 6. 不猜：信息不足时保留占位或写 TODO，不要编造项目内容。
 

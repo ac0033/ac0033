@@ -6,7 +6,8 @@
 
 - `drift.json`：本次检测到的漂移（必读）
 - `profile.yml`：首页唯一人工维护源（你要修改的文件）
-- `data/repos.json`：公开仓库的机械事实
+- `data/repos.json`：公开项目的稳定事实（name/url/description/archived），作为提交基线
+- `data/repos.latest.json`：全部仓库完整事实（含语言、stars、pushedAt、私有标记），运行期可用
 - `README.md`：当前渲染结果（只读参考，禁止手改）
 
 ## 你要做的事
