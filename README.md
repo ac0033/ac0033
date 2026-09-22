@@ -67,11 +67,11 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 |---|---|---|
 | **[review-rag-agent](https://github.com/ac0033/review-rag-agent)** | 商品审核问答；角色可见性过滤、混合检索、重排与索引同步 | 已公开 |
 | **PDFtranslator** | — | 🚧 待更新中 |
-| **datascience_platform** | — | 🚧 待更新中 |
+| **[dsflow](https://github.com/ac0033/dsflow)** | 数据科学项目全周期追踪平台：每一步的计划、审批、数据变化、讲解与验收都能在网页上检查；agent 通过协议 / MCP / 命令行 / 终端客户端 / Skill 接入 | 🔍 公开预览 |
 | **ai_tutor** | — | 🚧 待更新中 |
 | **[learning_assistant_agent](https://github.com/ac0033/learning_assistant_agent)** | 开源课程 AI 助教；课程 PDF 上传、混合检索、中文讲解与英文术语保留 | 即将下线 |
 
-<sub>“待更新中”仅为项目名占位；公开后补充介绍与仓库入口。</sub>
+<sub>“公开预览”：代码与功能已公开，可在本机安装试用；多用户登录与服务器部署尚未完成，暂不提供在线服务。“待更新中”仅为项目名占位；公开后补充介绍与仓库入口。</sub>
 
 ---
 
