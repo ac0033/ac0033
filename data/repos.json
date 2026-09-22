@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T11:24:25.469Z",
+  "generatedAt": "2026-09-22T12:16:57.915Z",
   "owner": "ac0033",
   "count": 20,
   "repos": {
@@ -8,140 +8,180 @@
       "url": "https://github.com/ac0033/agent-memory",
       "description": "Agent 三层记忆基础设施：人工复核、宿主蒸馏、一致性检查，支持 MCP / LangGraph / Skill 接入",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "1ab2ec02050c",
+      "release": null
     },
     "CMU-IDeeL.github.io": {
       "name": "CMU-IDeeL.github.io",
       "url": "https://github.com/ac0033/CMU-IDeeL.github.io",
       "description": "11-785 Introduction to Deep Learning (IDeeL) website with logistics and select course materials",
       "archived": false,
-      "fork": true
+      "fork": true,
+      "readme_sha": "e097c6903ce0",
+      "release": null
     },
     "course-cs229": {
       "name": "course-cs229",
       "url": "https://github.com/ac0033/course-cs229",
       "description": "Stanford CS229 Machine Learning 问题集个人作答：LaTeX 数学推导 + Python 实现，PS1 完成 16/26，持续更新",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "91552a313c53",
+      "release": null
     },
     "course-data100": {
       "name": "course-data100",
       "url": "https://github.com/ac0033/course-data100",
       "description": "Data 100 Spring 2025 公开学习材料：讲义 Notebook、数据与项目配套目录",
       "archived": false,
-      "fork": true
+      "fork": true,
+      "readme_sha": "605c2544b0ce",
+      "release": null
     },
     "course-data8": {
       "name": "course-data8",
       "url": "https://github.com/ac0033/course-data8",
       "description": "Data 8 Spring 2025 课程实践：作业、实验、人口与贫困、气候变化、电影分类",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "349356a1b314",
+      "release": null
     },
     "course-eecs498-umich": {
       "name": "course-eecs498-umich",
       "url": "https://github.com/ac0033/course-eecs498-umich",
       "description": "University of Michigan EECS 498-007 Deep Learning for Computer Vision：A1-A6 全部完成，约 8000 行实现，涵盖 kNN 到目标检测、Transformer、GAN 与 VAE",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "b06043cc1190",
+      "release": null
     },
     "cs61a": {
       "name": "cs61a",
       "url": "https://github.com/ac0033/cs61a",
       "description": "UC Berkeley CS 61A 个人课程实践：Python、Scheme、讨论、作业与 Hog / Cats / Ants 项目",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "0d9d90680963",
+      "release": null
     },
     "dsflow": {
       "name": "dsflow",
       "url": "https://github.com/ac0033/dsflow",
       "description": "数据科学项目全周期追踪平台：每一步的计划、审批、数据变化、讲解与验收都能在网页上检查；agent 通过协议 / MCP / 命令行 / 终端客户端 / Skill 接入（公开预览）",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "80bd050f98c6",
+      "release": null
     },
     "dsh-ctm": {
       "name": "dsh-ctm",
       "url": "https://github.com/ac0033/dsh-ctm",
       "description": "DeepSeek Harness 上下文管理插件：上下文可视化、token 用量、编辑、回退与快照恢复",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "8bb7583d2680",
+      "release": "v1.0.0"
     },
     "Humanizer-zh": {
       "name": "Humanizer-zh",
       "url": "https://github.com/ac0033/Humanizer-zh",
       "description": "中文 AI 写作去痕技能的个人 fork，保留上游规则、来源与许可",
       "archived": false,
-      "fork": true
+      "fork": true,
+      "readme_sha": "cecd00d9ef84",
+      "release": null
     },
     "introtodeeplearning": {
       "name": "introtodeeplearning",
       "url": "https://github.com/ac0033/introtodeeplearning",
       "description": "Local solutions and reproducible environment for MIT 6.S191 Introduction to Deep Learning",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "0c651a7374bf",
+      "release": null
     },
     "learning_assistant_agent": {
       "name": "learning_assistant_agent",
       "url": "https://github.com/ac0033/learning_assistant_agent",
       "description": "开源课程 AI 助教：PDF 上传、混合检索、中文讲解与英文术语保留",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "3a53288f0ed2",
+      "release": null
     },
     "llm_wiki": {
       "name": "llm_wiki",
       "url": "https://github.com/ac0033/llm_wiki",
       "description": "AI Agent 文献知识库：幂等入库、分页抓取、人工复核、MCP 查询与写作来源回库",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "10d33ce22e64",
+      "release": null
     },
     "materials-sp25": {
       "name": "materials-sp25",
       "url": "https://github.com/ac0033/materials-sp25",
       "description": "Data 8 Spring 2025 公开课程材料的个人 fork，含 Notebook、配套数据与复习目录",
       "archived": false,
-      "fork": true
+      "fork": true,
+      "readme_sha": "cedaece0f033",
+      "release": null
     },
     "review-rag-agent": {
       "name": "review-rag-agent",
       "url": "https://github.com/ac0033/review-rag-agent",
       "description": "商品审核 RAG 问答：角色可见性过滤、混合检索、重排与索引同步",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "e9f35ad2942e",
+      "release": null
     },
     "skills": {
       "name": "skills",
       "url": "https://github.com/ac0033/skills",
       "description": "Agent 技能集合：clear-reporting、human-writing、structured-writing、white-box-explainer 与 Humanizer-zh",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "48c6b6aa7be6",
+      "release": null
     },
     "sp26-lab": {
       "name": "sp26-lab",
       "url": "https://github.com/ac0033/sp26-lab",
       "description": "UC Berkeley CS 61C Spring 2026 实验材料的个人 fork：C、RISC-V 与数字电路",
       "archived": false,
-      "fork": true
+      "fork": true,
+      "readme_sha": "4252038c37f8",
+      "release": null
     },
     "white-box-explainer": {
       "name": "white-box-explainer",
       "url": "https://github.com/ac0033/white-box-explainer",
       "description": "项目白盒讲解 Skill：结合真实源码、数据与复算过程解释结果和边界",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "fa4ced3ce492",
+      "release": null
     },
     "wine-quality": {
       "name": "wine-quality",
       "url": "https://github.com/ac0033/wine-quality",
       "description": "用 11 项理化指标预测葡萄酒专家评分：红酒 MAE 0.4963 / 白酒 0.5752，附可复现、可验收、可追溯的完整数据科学工作流",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "8d7947f1a215",
+      "release": null
     },
     "writing-agent": {
       "name": "writing-agent",
       "url": "https://github.com/ac0033/writing-agent",
       "description": "LangGraph 写作流程：主题提炼、搜证、写作与最终核验；人工确认保存，独立确认 GitHub 发布",
       "archived": false,
-      "fork": false
+      "fork": false,
+      "readme_sha": "284b772796dc",
+      "release": null
     }
   }
 }

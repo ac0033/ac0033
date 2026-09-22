@@ -149,6 +149,36 @@ for (const name of Object.keys(pub)) {
   }
 }
 
+// README / release 变化：不改 About 描述，但说明项目有实质更新。
+// 首次引入 readme_sha 时 prev 缺失，自动跳过；网络抖动已由 collect 回退旧值。
+for (const name of Object.keys(pub)) {
+  if (!refs.has(name)) continue;
+  const p = prev[name];
+  const c = pub[name];
+  if (!p) continue;
+  if (p.readme_sha && c.readme_sha && p.readme_sha !== c.readme_sha) {
+    items.push({
+      type: "repo_readme_changed",
+      action: "semantic",
+      repo: name,
+      url: c.url,
+      detail: `${name} 的 README 已更新`,
+      suggestion: "打开仓库看改了什么，判断首页的“一句话定位 / 主要内容”是否需要同步",
+    });
+  }
+  // release 字段首次引入时 prev 里不存在，需跳过（用 null 表示“无 release”，故按字段是否存在判断）
+  if (Object.prototype.hasOwnProperty.call(p, "release") && c.release && c.release !== (p.release ?? null)) {
+    items.push({
+      type: "repo_released",
+      action: "semantic",
+      repo: name,
+      url: c.url,
+      detail: `${name} 发布了新版本 ${c.release}`,
+      suggestion: "看是否需要更新首页表述或状态",
+    });
+  }
+}
+
 const articleFiles = new Set((profile.writing?.articles ?? []).map((a) => a.file));
 if (existsSync(ARTICLES)) {
   for (const f of readdirSync(ARTICLES).filter((f) => f.endsWith(".md"))) {
@@ -211,6 +241,7 @@ for (const [action, title] of sections) {
   lines.push(`## ${title}`, "");
   for (const i of group) {
     lines.push(`- [ ] ${i.detail}`);
+    if (i.url) lines.push(`  - 仓库：${i.url}`);
     if (i.before && i.after) {
       lines.push(`  - 旧：${i.before}`);
       lines.push(`  - 新：${i.after}`);

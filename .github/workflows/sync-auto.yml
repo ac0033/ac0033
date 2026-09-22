@@ -2,10 +2,12 @@ name: Sync profile (auto)
 
 # 方案 A：自动更新机械变更（归档状态、链接、列表快照），并维护数据基线。
 # 语义变更（表述）不在这里处理，交给 remind.yml / ai-update.yml。
+# 排序：本 workflow 晚于 remind 运行（03:27 vs 03:17），
+# 先让 remind 检测到漂移，本流程再提交新快照。
 
 on:
   schedule:
-    - cron: "17 3 * * *" # 每天 03:17 UTC
+    - cron: "27 3 * * *" # 每天 03:27 UTC（remind 之后）
   workflow_dispatch:
   repository_dispatch:
     types: [repo-updated] # 项目仓库可选：push 时派发本事件，实现近实时

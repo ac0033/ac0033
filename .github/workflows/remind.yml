@@ -1,11 +1,14 @@
 name: Remind profile update
 
 # 方案 B：检测到漂移时开 / 更新一个 Issue 提醒，不自动改任何内容。
-# 适合先观察一段时间，校准“什么算需要更新的变更”。
+#
+# 排序：本 workflow 早于 sync-auto 运行（03:17 vs 03:27），
+# 保证在 sync-auto 提交新快照之前先完成检测，避免漂移被静默刷新。
+# 提醒不会自动关闭：首页更新后请手动关闭 issue。
 
 on:
   schedule:
-    - cron: "27 3 * * *"
+    - cron: "17 3 * * *"
   workflow_dispatch:
   repository_dispatch:
     types: [repo-updated]
@@ -41,17 +44,6 @@ jobs:
         id: gate
         run: echo "drift=$(jq -r .hasDrift drift.json)" >> "$GITHUB_OUTPUT"
 
-      - name: 无漂移：关闭提醒 Issue（如有）
-        if: steps.gate.outputs.drift != 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          num=$(gh issue list --label profile-sync --state open --limit 1 --json number --jq '.[0].number // empty')
-          if [ -n "$num" ]; then
-            gh issue close "$num" --comment "首页已同步，自动关闭。"
-            echo "已关闭 Issue #$num"
-          fi
-
       - name: 有漂移：按内容去重，创建或更新 Issue
         if: steps.gate.outputs.drift == 'true'
         env:
@@ -61,7 +53,12 @@ jobs:
 
           # 用漂移项（不含生成时间）的哈希去重，避免每天重复通知
           HASH=$(jq -c '.items' drift.json | sha256sum | cut -d' ' -f1)
-          { echo "<!-- drift-hash: $HASH -->"; cat drift.md; } > .drift-body.md
+          {
+            echo "<!-- drift-hash: $HASH -->"
+            echo "> 更新首页后请手动关闭本 issue；本提醒不会自动消失。"
+            echo
+            cat drift.md
+          } > .drift-body.md
 
           num=$(gh issue list --label profile-sync --state open --limit 1 --json number --jq '.[0].number // empty')
           if [ -n "$num" ]; then

@@ -5,7 +5,7 @@
 | 策略 | workflow | 行为 | 触发 |
 |---|---|---|---|
 | A 自动 | `sync-auto.yml` | 机械变更（归档状态等）直接提交 | 每天定时 / 手动 / 跨仓库事件 |
-| B 提醒 | `remind.yml` | 有漂移就开 / 更新 Issue | 每天定时 / 手动 / 跨仓库事件 |
+| B 提醒 | `remind.yml` | 有漂移就开 / 更新 Issue（更新首页后手动关闭） | 每天定时 / 手动 / 跨仓库事件 |
 | C AI Agent | 本地 pi（`ai-update.yml` 默认禁用） | 按漂移更新 `profile.yml` | 需要时手动 |
 
 三者可同时开启：`remind` 负责提醒，`sync-auto` 顺手处理机械项，`ai-update` 在需要时产出可审阅的 PR。
@@ -34,8 +34,10 @@
 `diff.mjs` 把变化分成三类，写入 `drift.json` / `drift.md`：
 
 - **mechanical**：归档 / 取消归档等，`apply.mjs` 可自动改 `profile.yml`（行级替换，不动格式和注释）。
-- **semantic**：新仓库、简介变化、新文章等，需要人判断或交给 Agent。
+- **semantic**：新仓库、简介变化、README 内容哈希变化、新 release、新文章等，需要人判断或交给 Agent。
 - **info**：如引用了私有仓库，仅提示。
+
+> 排序：`remind`（03:17 UTC）早于 `sync-auto`（03:27 UTC），保证在快照被刷新前先完成检测。提醒不会自动关闭，更新首页后请手动关 issue。
 
 ## 本地使用
 
@@ -75,5 +77,5 @@ git add -A && git commit -m "chore(profile): sync by agent" && git push
 ## 注意
 
 - 定时工作流在仓库长期无活动后会被 GitHub 停用，`sync-auto.yml` 每月写一次 `data/last-scan.txt` 保活。
-- `data/repos.json` 是公开仓库快照，会提交；`data/repos.latest.json` 含私有仓库，已 gitignore，不要提交。
+- `data/repos.json` 是公开仓库快照，会提交；除名称/描述/归档外，还记录每个仓库的 **README 内容哈希**（`readme_sha`）与最新 `release`，用于发现“README/发版了但 About 描述没变”的更新。`data/repos.latest.json` 含私有仓库，已 gitignore，不要提交。
 - `README.md` 禁止手改，`ci.yml` 会在 PR / push 时校验一致性。
