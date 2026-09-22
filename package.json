@@ -1,0 +1,18 @@
+{
+  "name": "ac0033-profile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GitHub profile README: single source of truth in profile.yml, rendered to README.md",
+  "scripts": {
+    "collect": "node scripts/collect.mjs",
+    "diff": "node scripts/diff.mjs",
+    "apply": "node scripts/apply.mjs",
+    "render": "node scripts/render.mjs",
+    "check": "node scripts/render.mjs --check",
+    "sync": "node scripts/collect.mjs && node scripts/diff.mjs && node scripts/apply.mjs && node scripts/render.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.6.1"
+  }
+}

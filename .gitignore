@@ -1,0 +1,6 @@
+node_modules/
+data/repos.full.json
+# drift artifacts are produced per run, not committed
+drift.json
+drift.md
+.drift-body.md

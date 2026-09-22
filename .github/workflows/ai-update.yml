@@ -1,0 +1,87 @@
+name: AI profile update
+
+# 方案 C：检测到漂移后，由 pi agent 读取 drift.json 更新 profile.yml，
+# 渲染校验通过后开 PR（不直推 main），人工审核合并。
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: 可选：给 Agent 的额外说明
+        required: false
+  repository_dispatch:
+    types: [repo-updated]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: profile-ai-update
+  cancel-in-progress: false
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: 采集仓库事实
+        run: npm run collect
+        env:
+          GH_TOKEN: ${{ secrets.PROFILE_PAT }}
+
+      - name: 检测漂移
+        run: npm run diff
+
+      - name: 判断是否需要处理
+        id: gate
+        run: echo "drift=$(jq -r .hasDrift drift.json)" >> "$GITHUB_OUTPUT"
+
+      - name: 安装 pi
+        if: steps.gate.outputs.drift == 'true'
+        run: npm i -g --ignore-scripts @earendil-works/pi-coding-agent
+
+      - name: Agent 更新 profile.yml
+        if: steps.gate.outputs.drift == 'true'
+        env:
+          # 选择一个已配置 API key 的 provider；也可用 DEEPSEEK_API_KEY / OPENAI_API_KEY 等
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AGENT_NOTE: ${{ github.event.inputs.note }}
+        run: |
+          args=( -p --no-session -t read,write,edit,bash )
+          if [ -n "$AGENT_NOTE" ]; then
+            args+=( --append-system-prompt "$AGENT_NOTE" )
+          fi
+          pi "${args[@]}" "$(cat scripts/AGENT_TASK.md)"
+
+      - name: 渲染并校验
+        if: steps.gate.outputs.drift == 'true'
+        run: |
+          npm run render
+          npm run check
+
+      - name: 开 PR
+        if: steps.gate.outputs.drift == 'true'
+        env:
+          # 用 PAT 推送分支，PR 才会触发 CI
+          GH_TOKEN: ${{ secrets.PROFILE_PAT }}
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Agent 未产生变更"
+            exit 0
+          fi
+          branch="profile-sync/$(date -u +%Y%m%d-%H%M%S)"
+          git checkout -b "$branch"
+          git config user.name "profile-agent"
+          git config user.email "profile-agent@users.noreply.github.com"
+          git add -A
+          git commit -m "chore(profile): AI sync $(date -u +%F)"
+          git push -u origin "$branch"
+          gh label create profile-sync --description "GitHub 首页待同步" --color FBCA04 2>/dev/null || true
+          gh pr create --fill --label profile-sync

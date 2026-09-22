@@ -1,0 +1,2 @@
+# 统一使用 LF，保证 render --check 在各平台一致
+* text=auto eol=lf

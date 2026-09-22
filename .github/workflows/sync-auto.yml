@@ -1,0 +1,64 @@
+name: Sync profile (auto)
+
+# 方案 A：自动更新机械变更（归档状态、链接、列表快照），并维护数据基线。
+# 语义变更（表述）不在这里处理，交给 remind.yml / ai-update.yml。
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # 每天 03:17 UTC
+  workflow_dispatch:
+  repository_dispatch:
+    types: [repo-updated] # 项目仓库可选：push 时派发本事件，实现近实时
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-sync-auto
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: 采集仓库事实
+        run: npm run collect
+        env:
+          # 需要读取全部仓库（含私有，用于判断引用），用 PAT 而非默认 GITHUB_TOKEN
+          GH_TOKEN: ${{ secrets.PROFILE_PAT }}
+
+      - name: 检测漂移
+        run: npm run diff
+
+      - name: 应用 mechanical 变更
+        run: npm run apply
+
+      - name: 生成 README
+        run: npm run render
+
+      - name: Keepalive（每月一次，避免定时工作流因仓库长期无活动被停用）
+        run: |
+          f=data/last-scan.txt
+          month=$(date -u +%Y-%m)
+          if [ ! -f "$f" ] || [ "$(cut -c1-7 "$f")" != "$month" ]; then
+            date -u +%Y-%m-%dT%H:%M:%SZ > "$f"
+          fi
+
+      - name: 提交
+        run: |
+          git add -A README.md profile.yml data/
+          if git diff --cached --quiet; then
+            echo "没有需要提交的变更"
+            exit 0
+          fi
+          git config user.name "profile-bot"
+          git config user.email "profile-bot@users.noreply.github.com"
+          git commit -m "chore(profile): auto sync $(date -u +%F)"
+          git push
