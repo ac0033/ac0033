@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T08:35:27.803Z",
+  "generatedAt": "2026-09-25T08:56:55.434Z",
   "owner": "ac0033",
   "count": 20,
   "repos": {
@@ -9,7 +9,7 @@
       "description": "Agent 三层记忆基础设施：人工复核、宿主蒸馏、一致性检查，支持 MCP / LangGraph / Skill 接入",
       "archived": false,
       "fork": false,
-      "readme_sha": "1ab2ec02050c",
+      "readme_sha": "01f6e5b7182b",
       "release": null
     },
     "CMU-IDeeL.github.io": {
