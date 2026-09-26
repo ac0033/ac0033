@@ -41,19 +41,18 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 
 <sub>llm-wiki 对应仓库名 `llm_wiki`。</sub>
 
-### Skills · 具体技能
+### Skills · 精选示例
 
-| 技能 | 用途 |
-|---|---|
-| [systems-thinking](https://github.com/ac0033/skills/tree/main/systems-thinking) | 组织项目计划、系统讲解与结构化写作，统一概念与论证层次 |
-| [cognitive-receiver](https://github.com/ac0033/skills/tree/main/cognitive-receiver) | 从具体问题逐步讲到抽象概念，降低复杂讲解的理解负担 |
-| [clear-reporting](https://github.com/ac0033/skills/tree/main/clear-reporting) | 把已有结果整理成有依据、能核查的汇报，附材料格式与检查程序 |
-| [human-writing](https://github.com/ac0033/skills/tree/main/human-writing) | 中文写作、修订与语言风格检查，附场景参考和文本检查脚本 |
-| [structured-writing](https://github.com/ac0033/skills/tree/main/structured-writing) | 文章结构、论证与量化表达，附金字塔原则、模板和示例 |
-| [white-box-explainer](https://github.com/ac0033/white-box-explainer) | 结合真实代码与数据讲清项目原理、执行过程和复算方法 |
-| [Humanizer-zh](https://github.com/ac0033/Humanizer-zh) | 中文 AI 写作去痕；第三方技能的个人 fork，保留上游来源 |
+| 技能 | 用途 | 亮点 |
+|---|---|---|
+| [systems-thinking](https://github.com/ac0033/skills/tree/main/systems-thinking) | 组织项目计划、系统讲解与结构化写作 | 统一用「层次 → 维度 → 板块 → 具体事项」组织，附框架、模板和示例 |
+| [goal-driven-development](https://github.com/ac0033/skills/tree/main/goal-driven-development) | 以终为始开发功能：先定目标和验收标准，再拆解问题、选方案 | 借鉴论文与开源找思路；验证集迭代、封存测试集验收 |
+| [data-science-project](https://github.com/ac0033/skills/tree/main/data-science-project) | 数据科学项目的全周期规划、执行、验收与解释 | 计划须用户批准；验收从实际产物独立核对，不复用执行时的中间结果 |
+| [clear-reporting](https://github.com/ac0033/skills/tree/main/clear-reporting) | 把已有结果整理成有依据、能核查的汇报 | 附材料格式、示例与 Python 检查程序（含单元测试），可选插件包装 |
+| [publish-private-project](https://github.com/ac0033/skills/tree/main/publish-private-project) | 私有项目首次公开前的隐私与涉密核查、清理和发布配套 | 核查清单细到「文件:行号」；全新历史，私有推送验证后再切公开 |
+| [white-box-explainer](https://github.com/ac0033/white-box-explainer) | 结合真实代码与数据讲清项目原理、执行过程和复算方法 | 独立仓库，以 Git submodule 收录 |
 
-另有 [语言风格 System Prompt](https://github.com/ac0033/skills/blob/main/语言风格%20System%20Prompt.md)，用于约定中文表达方式。各技能的来源、许可与使用方法见对应目录。
+<sub>上表只挑了几个示例，不是全部：`skills` 仓库现有 14 个技能，表中未列的 8 个为 cognitive-receiver（降低复杂讲解的理解负担）、human-writing 与 structured-writing（中文写作与结构）、submit、tidy-docs、synchronous（把技能同步到本机各 agent）、api（为项目暴露 plugin / skills / MCP / CLI / HTTP 接口）、Humanizer-zh（第三方 fork）；另有[语言风格 System Prompt](https://github.com/ac0033/skills/blob/main/语言风格%20System%20Prompt.md)。完整列表、来源与许可见 [skills](https://github.com/ac0033/skills)。</sub>
 
 ---
 
