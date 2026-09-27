@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T08:43:15.178Z",
+  "generatedAt": "2026-09-27T09:23:25.018Z",
   "owner": "ac0033",
   "count": 20,
   "repos": {
@@ -9,7 +9,7 @@
       "description": "Agent 三层记忆基础设施：人工复核、宿主蒸馏、一致性检查，支持 MCP / LangGraph / Skill 接入",
       "archived": false,
       "fork": false,
-      "readme_sha": "01f6e5b7182b",
+      "readme_sha": "031e4a5ee9c0",
       "release": null
     },
     "CMU-IDeeL.github.io": {
@@ -144,7 +144,7 @@
       "description": "Agent 技能集合：clear-reporting、human-writing、structured-writing、white-box-explainer 与 Humanizer-zh",
       "archived": false,
       "fork": false,
-      "readme_sha": "987c38d0503c",
+      "readme_sha": "5b28a1c3df5c",
       "release": null
     },
     "sp26-lab": {
