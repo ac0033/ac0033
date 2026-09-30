@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T09:23:25.018Z",
+  "generatedAt": "2026-09-30T09:50:36.761Z",
   "owner": "ac0033",
   "count": 20,
   "repos": {
@@ -81,7 +81,7 @@
       "description": "DeepSeek Harness 上下文管理插件：上下文可视化、token 用量、编辑、回退与快照恢复",
       "archived": false,
       "fork": false,
-      "readme_sha": "8bb7583d2680",
+      "readme_sha": "563e8593dd59",
       "release": "v1.0.0"
     },
     "Humanizer-zh": {
