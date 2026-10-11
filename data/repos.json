@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-30T09:50:36.761Z",
+  "generatedAt": "2026-10-11T10:09:29.464Z",
   "owner": "ac0033",
-  "count": 20,
+  "count": 21,
   "repos": {
     "agent-memory": {
       "name": "agent-memory",
@@ -118,6 +118,15 @@
       "archived": false,
       "fork": false,
       "readme_sha": "10d33ce22e64",
+      "release": null
+    },
+    "LLMs-from-scratch": {
+      "name": "LLMs-from-scratch",
+      "url": "https://github.com/ac0033/LLMs-from-scratch",
+      "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+      "archived": false,
+      "fork": true,
+      "readme_sha": "3bc43fa27a58",
       "release": null
     },
     "materials-sp25": {
