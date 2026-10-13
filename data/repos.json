@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-11T10:09:29.464Z",
+  "generatedAt": "2026-10-13T10:48:03.961Z",
   "owner": "ac0033",
-  "count": 21,
+  "count": 22,
   "repos": {
     "agent-memory": {
       "name": "agent-memory",
@@ -136,6 +136,15 @@
       "archived": false,
       "fork": true,
       "readme_sha": "cedaece0f033",
+      "release": null
+    },
+    "PDFtranslator": {
+      "name": "PDFtranslator",
+      "url": "https://github.com/ac0033/PDFtranslator",
+      "description": "可审计的 PDF 中文翻译引擎：BabelDOC 版面重排、原文对照、程序核对译文单元，可作为 MCP / HTTP 服务被宿主调用（AGPL-3.0）",
+      "archived": false,
+      "fork": false,
+      "readme_sha": "c90782363514",
       "release": null
     },
     "review-rag-agent": {
