@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T10:48:03.961Z",
+  "generatedAt": "2026-11-03T11:04:01.265Z",
   "owner": "ac0033",
   "count": 22,
   "repos": {
@@ -162,7 +162,7 @@
       "description": "Agent 技能集合：clear-reporting、human-writing、structured-writing、white-box-explainer 与 Humanizer-zh",
       "archived": false,
       "fork": false,
-      "readme_sha": "5b28a1c3df5c",
+      "readme_sha": "2994f71a7596",
       "release": null
     },
     "sp26-lab": {
