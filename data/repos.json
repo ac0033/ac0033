@@ -1,17 +1,8 @@
 {
-  "generatedAt": "2026-11-03T11:04:01.265Z",
+  "generatedAt": "2026-11-10T11:25:12.486Z",
   "owner": "ac0033",
-  "count": 20,
+  "count": 16,
   "repos": {
-    "agent-memory": {
-      "name": "agent-memory",
-      "url": "https://github.com/ac0033/agent-memory",
-      "description": "Agent 三层记忆基础设施：人工复核、宿主蒸馏、一致性检查，支持 MCP / LangGraph / Skill 接入",
-      "archived": false,
-      "fork": false,
-      "readme_sha": "031e4a5ee9c0",
-      "release": null
-    },
     "CMU-IDeeL.github.io": {
       "name": "CMU-IDeeL.github.io",
       "url": "https://github.com/ac0033/CMU-IDeeL.github.io",
@@ -28,15 +19,6 @@
       "archived": false,
       "fork": false,
       "readme_sha": "91552a313c53",
-      "release": null
-    },
-    "course-data100": {
-      "name": "course-data100",
-      "url": "https://github.com/ac0033/course-data100",
-      "description": "Data 100 Spring 2025 公开学习材料：讲义 Notebook、数据与项目配套目录",
-      "archived": false,
-      "fork": true,
-      "readme_sha": "605c2544b0ce",
       "release": null
     },
     "course-data8": {
@@ -90,7 +72,7 @@
       "description": "中文 AI 写作去痕技能的个人 fork，保留上游规则、来源与许可",
       "archived": false,
       "fork": true,
-      "readme_sha": "cecd00d9ef84",
+      "readme_sha": "6cbacd1cff69",
       "release": null
     },
     "introtodeeplearning": {
@@ -129,31 +111,13 @@
       "readme_sha": "cedaece0f033",
       "release": null
     },
-    "PDFtranslator": {
-      "name": "PDFtranslator",
-      "url": "https://github.com/ac0033/PDFtranslator",
-      "description": "可审计的 PDF 中文翻译引擎：BabelDOC 版面重排、原文对照、程序核对译文单元，可作为 MCP / HTTP 服务被宿主调用（AGPL-3.0）",
-      "archived": false,
-      "fork": false,
-      "readme_sha": "c90782363514",
-      "release": null
-    },
-    "review-rag-agent": {
-      "name": "review-rag-agent",
-      "url": "https://github.com/ac0033/review-rag-agent",
-      "description": "商品审核 RAG 问答：角色可见性过滤、混合检索、重排与索引同步",
-      "archived": false,
-      "fork": false,
-      "readme_sha": "e9f35ad2942e",
-      "release": null
-    },
     "skills": {
       "name": "skills",
       "url": "https://github.com/ac0033/skills",
       "description": "Agent 技能集合：clear-reporting、human-writing、structured-writing、white-box-explainer 与 Humanizer-zh",
       "archived": false,
       "fork": false,
-      "readme_sha": "2994f71a7596",
+      "readme_sha": "6f3e13a3cff6",
       "release": null
     },
     "sp26-lab": {
@@ -171,7 +135,7 @@
       "description": "项目白盒讲解 Skill：结合真实源码、数据与复算过程解释结果和边界",
       "archived": false,
       "fork": false,
-      "readme_sha": "fa4ced3ce492",
+      "readme_sha": "98f75180ab09",
       "release": null
     },
     "wine-quality": {
