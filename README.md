@@ -19,7 +19,7 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 - **[AI 时代普通人的价值：从执行任务到解决问题](articles/2026-09-08-AI时代普通人的价值：从执行任务到解决问题-60be066b72dd.md)**：关于 AI 时代个人价值创造的思考。
 - **[让 Agent 可靠地干活：从单 Agent 到多 Agent，再到 AI OS](articles/让-Agent-可靠地干活：从单-Agent-到-AI-OS-的一条工程主线.md)**：从单 Agent 上下文管理，到多 Agent 协作与系统治理。
 
-观点与材料整理：YuanLumen。写作工具：[writing-agent](https://github.com/ac0033/writing-agent) · 来源积累：[llm-wiki](https://github.com/ac0033/llm_wiki)。
+观点与材料整理：YuanLumen。
 
 ---
 
@@ -35,11 +35,7 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 |---|---|---|
 | **[dsh-ctm](https://github.com/ac0033/dsh-ctm)** | 看清并管理 Agent 上下文 | DeepSeek Harness 插件；上下文可视化、token 用量、编辑与回退、快照恢复 |
 | **[agent-memory](https://github.com/ac0033/agent-memory)** | 让 agent 跨会话记住偏好、约定与踩过的坑 | 证据锚定记忆：以原话为证据、读取只组织不裁决；长期 / 工作 / 短期三层 + 写入评价门；LoCoMo 42:33、60 题 58/60；MCP / Python / Skill 接入 |
-| **[writing-agent](https://github.com/ac0033/writing-agent)** | 从主题与材料走向可核查的文章 | v2 写作图：摘要确认 → 研究 → 框架 → 写作 → 审核 → 润色；版本绑定与人工确认；CLI 额度检查、模型回退、MCP 接入 |
-| **[llm-wiki](https://github.com/ac0033/llm_wiki)** | 为研究与写作积累可追溯的来源 | AI Agent（Agent Harness）文献知识库；raw 原文 / wiki 页面 / registry 登记三层；幂等入库、分页抓取、人工复核、周更评分；Claude 生成 + Codex 独立核验 |
 | **[skills](https://github.com/ac0033/skills)** | 把常用工作方法沉淀为 Agent 技能 | 系统构思、讲解、汇报与中文写作；按任务提供规则、示例和检查程序 |
-
-<sub>llm-wiki 对应仓库名 `llm_wiki`。</sub>
 
 ### Skills · 精选示例
 

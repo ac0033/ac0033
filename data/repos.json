@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-11-03T11:04:01.265Z",
   "owner": "ac0033",
-  "count": 22,
+  "count": 20,
   "repos": {
     "agent-memory": {
       "name": "agent-memory",
@@ -111,15 +111,6 @@
       "readme_sha": "3a53288f0ed2",
       "release": null
     },
-    "llm_wiki": {
-      "name": "llm_wiki",
-      "url": "https://github.com/ac0033/llm_wiki",
-      "description": "AI Agent 文献知识库：幂等入库、分页抓取、人工复核、MCP 查询与写作来源回库",
-      "archived": false,
-      "fork": false,
-      "readme_sha": "10d33ce22e64",
-      "release": null
-    },
     "LLMs-from-scratch": {
       "name": "LLMs-from-scratch",
       "url": "https://github.com/ac0033/LLMs-from-scratch",
@@ -190,15 +181,6 @@
       "archived": false,
       "fork": false,
       "readme_sha": "8d7947f1a215",
-      "release": null
-    },
-    "writing-agent": {
-      "name": "writing-agent",
-      "url": "https://github.com/ac0033/writing-agent",
-      "description": "LangGraph 写作流程：主题提炼、搜证、写作与最终核验；人工确认保存，独立确认 GitHub 发布",
-      "archived": false,
-      "fork": false,
-      "readme_sha": "deb381a2ecee",
       "release": null
     }
   }
