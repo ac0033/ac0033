@@ -14,7 +14,7 @@
 
 1. 阅读 `drift.json`，逐条处理 `action: semantic` 的项；`mechanical` 项已由脚本处理，可复核。
 2. **只修改 `profile.yml`**，保持与现有条目的风格一致：
-   - `repo_new`：选择合适 section，新增一行，补 `problem`（解决什么问题 / 场景）与 `content`（主要内容）；表格列含义见同 section 其他行。
+   - `repo_new`：符合当前展示范围时，沿用对应板块的内容格式。已确认暂不展示的公开仓库记入 `unlisted_repos`。
    - `repo_description_changed`：判断首页表述是否需要同步；只在确实过时时修改，不为了“对齐 API 文案”而改写。
    - `repo_missing`：核对链接；改名则更新 `repo`，删除则移除该行或改为占位（`{ label, link: false }` + 合适 status）。
    - `article_new`：在 `writing.articles` 增加条目，`file` 用相对路径，`title` 用文章标题，`summary` 用一句话中文概括。

@@ -74,18 +74,17 @@ walk(profile);
 
 // ---- 计算漂移 ----
 const items = [];
+const unlisted = new Set(profile.unlisted_repos ?? []);
 
 for (const name of Object.keys(pub)) {
-  if (name === owner) continue; // 首页仓库自身不计
-  if (!refs.has(name)) {
-    items.push({
-      type: "repo_new",
-      action: "semantic",
-      repo: name,
-      detail: `新公开仓库 ${name} 未出现在首页`,
-      suggestion: "确认分类，补一句“解决什么问题 / 主要内容”，或放入对应表格",
-    });
-  }
+  if (name === owner || unlisted.has(name) || refs.has(name)) continue;
+  items.push({
+    type: "repo_new",
+    action: "semantic",
+    repo: name,
+    detail: `新公开仓库 ${name} 未出现在首页`,
+    suggestion: "判断是否适合首页展示，适合时补充用途与主要内容",
+  });
 }
 
 for (const name of refs) {
@@ -180,7 +179,7 @@ for (const name of Object.keys(pub)) {
 }
 
 const articleFiles = new Set((profile.writing?.articles ?? []).map((a) => a.file));
-if (existsSync(ARTICLES)) {
+if (profile.writing && existsSync(ARTICLES)) {
   for (const f of readdirSync(ARTICLES).filter((f) => f.endsWith(".md"))) {
     const rel = `articles/${f}`;
     if (!articleFiles.has(rel)) {

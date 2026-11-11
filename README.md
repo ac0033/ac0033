@@ -2,11 +2,9 @@
 
 # YuanLumen's Garage 🛠️
 
-**做 AI 工具与产品，用数据解决问题，在开源课程中持续学习。**
+**构建 AI 工具与产品，记录公开课学习实践。**
 
-Building AI tools & products · Practicing data science · Learning in public
-
-[AI 工具](#ai-tools) · [AI 产品](#ai-products) · [数据科学项目](#data-science) · [开源课程](#open-courses)
+[AI 工具](#ai-tools) · [AI 产品](#ai-products) · [AI 学习](#ai-learning)
 
 Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 
@@ -14,41 +12,13 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 
 ---
 
-## ✍️ 文章与思考 · Writing
-
-- **[AI 时代普通人的价值：从执行任务到解决问题](articles/2026-09-08-AI时代普通人的价值：从执行任务到解决问题-60be066b72dd.md)**：关于 AI 时代个人价值创造的思考。
-- **[让 Agent 可靠地干活：从单 Agent 到多 Agent，再到 AI OS](articles/让-Agent-可靠地干活：从单-Agent-到-AI-OS-的一条工程主线.md)**：从单 Agent 上下文管理，到多 Agent 协作与系统治理。
-
-观点与材料整理：YuanLumen。
-
----
-
-围绕 Agent 的上下文、记忆、知识与写作流程构建工具，也探索 AI 在文档阅读、课程学习和数据科学中的应用。这里整理公开项目与课程实践；尚未发布的项目先保留名称，后续补充。
-
 <a id="ai-tools"></a>
 
 ## 🛠️ AI 工具
 
-让 Agent 更好地使用上下文、积累知识，并把工作过程变得可检查、可复用。
-
-| 项目 | 解决什么问题 | 主要内容 |
-|---|---|---|
-| **[dsh-ctm](https://github.com/ac0033/dsh-ctm)** | 看清并管理 Agent 上下文 | DeepSeek Harness 插件；上下文可视化、token 用量、编辑与回退、快照恢复 |
-| **[agent-memory](https://github.com/ac0033/agent-memory)** | 让 agent 跨会话记住偏好、约定与踩过的坑 | 证据锚定记忆：以原话为证据、读取只组织不裁决；长期 / 工作 / 短期三层 + 写入评价门；LoCoMo 42:33、60 题 58/60；MCP / Python / Skill 接入 |
-| **[skills](https://github.com/ac0033/skills)** | 把常用工作方法沉淀为 Agent 技能 | 系统构思、讲解、汇报与中文写作；按任务提供规则、示例和检查程序 |
-
-### Skills · 精选示例
-
-| 技能 | 用途 | 亮点 |
-|---|---|---|
-| [systems-thinking](https://github.com/ac0033/skills/tree/main/systems-thinking) | 组织项目计划、系统讲解与结构化写作 | 统一用「层次 → 维度 → 板块 → 具体事项」组织，附框架、模板和示例 |
-| [goal-driven-development](https://github.com/ac0033/skills/tree/main/goal-driven-development) | 以终为始开发功能：先定目标和验收标准，再拆解问题、选方案 | 借鉴论文与开源找思路；验证集迭代、封存测试集验收 |
-| [data-science-project](https://github.com/ac0033/skills/tree/main/data-science-project) | 数据科学项目的全周期规划、执行、验收与解释 | 计划须用户批准；验收从实际产物独立核对，不复用执行时的中间结果 |
-| [clear-reporting](https://github.com/ac0033/skills/tree/main/clear-reporting) | 把已有结果整理成有依据、能核查的汇报 | 附材料格式、示例与 Python 检查程序（含单元测试），可选插件包装 |
-| [publish-private-project](https://github.com/ac0033/skills/tree/main/publish-private-project) | 私有项目首次公开前的隐私与涉密核查、清理和发布配套 | 核查清单细到「文件:行号」；全新历史，私有推送验证后再切公开 |
-| [white-box-explainer](https://github.com/ac0033/white-box-explainer) | 结合真实代码与数据讲清项目原理、执行过程和复算方法 | 独立仓库，以 Git submodule 收录 |
-
-<sub>上表只挑了几个示例，不是全部：`skills` 仓库现有 14 个技能，表中未列的 8 个为 cognitive-receiver（降低复杂讲解的理解负担）、human-writing 与 structured-writing（中文写作与结构）、submit、tidy-docs、synchronous（把技能同步到本机各 agent）、api（为项目暴露 plugin / skills / MCP / CLI / HTTP 接口）、Humanizer-zh（第三方 fork）；另有[语言风格 System Prompt](https://github.com/ac0033/skills/blob/main/语言风格%20System%20Prompt.md)。完整列表、来源与许可见 [skills](https://github.com/ac0033/skills)。</sub>
+| 工具 | 用途 |
+|---|---|
+| **[product-dev](https://github.com/ac0033/skills/tree/main/product-dev)** | 面向 Claude Code 和 Codex 的产品开发插件，按任务选择流程，覆盖需求、设计、开发、验证与交付。 |
 
 ---
 
@@ -56,35 +26,11 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 
 ## 🚀 AI 产品
 
-面向具体使用场景，把检索、文档与 Agent 能力组织成应用。
-
-| 项目 | 场景与内容 | 状态 |
-|---|---|---|
-| **[review-rag-agent](https://github.com/ac0033/review-rag-agent)** | 商品审核问答；角色可见性过滤、混合检索、重排与索引同步 | 已公开 |
-| **PDFtranslator** | — | 🚧 待更新中 |
-| **[dsflow](https://github.com/ac0033/dsflow)** | 数据科学项目全周期追踪平台（类似 MLflow + DVC，补状态与认知追踪）：计划、审批、数据变化、讲解与验收在网页上可检查；只读接入，项目文件为唯一事实来源；agent 经协议 / MCP / 命令行 / 终端 / Skill 接入 | 🔍 公开预览 |
-| **ai_tutor** | — | 🚧 待更新中 |
-| **[learning_assistant_agent](https://github.com/ac0033/learning_assistant_agent)** | 开源课程 AI 助教；课程 PDF 上传、混合检索、中文讲解与英文术语保留 | 即将下线 |
-
-<sub>“公开预览”：代码与功能已公开，可在本机安装试用；多用户登录与服务器部署尚未完成，暂不提供在线服务。“待更新中”仅为项目名占位；公开后补充介绍与仓库入口。</sub>
-
 ---
 
-<a id="data-science"></a>
+<a id="ai-learning"></a>
 
-## 📊 数据科学项目
-
-从数据理解、建模到评估与交付，保留判断依据和可复查的过程。
-
-| 项目 | 问题 | 方法与产物 |
-|---|---|---|
-| **[wine-quality](https://github.com/ac0033/wine-quality)** | 根据 11 项理化指标预测葡萄酒 quality 评分 | 红酒与白酒分别训练随机森林；包含数据核验、探索分析、模型比较、最终评估、可解释性与模型交付记录 |
-
----
-
-<a id="open-courses"></a>
-
-## 📚 开源课程
+## 📚 AI 学习
 
 公开课自学记录、个人作业实现与课程材料整理。按学校与课程展示，具体完成情况见各仓库。
 
@@ -93,12 +39,8 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 <tr><th>学校</th><th>课程</th><th>仓库与内容</th></tr>
 </thead>
 <tbody>
-<tr><td rowspan="4"><strong>UCB</strong></td><td>CS 61A · 计算机程序的构造与解释</td><td><a href="https://github.com/ac0033/cs61a">cs61a</a> · Python、Scheme、讨论与项目练习</td></tr>
-<tr><td>CS 61C · 计算机体系结构</td><td><a href="https://github.com/ac0033/sp26-lab">sp26-lab</a> · Spring 2026 的 C、RISC-V 与数字电路实验</td></tr>
+<tr><td rowspan="2"><strong>UCB</strong></td><td>CS 61A · 计算机程序的构造与解释</td><td><a href="https://github.com/ac0033/cs61a">cs61a</a> · Python、Scheme、讨论与项目练习</td></tr>
 <tr><td>Data 8 · 数据科学基础</td><td><a href="https://github.com/ac0033/course-data8">course-data8</a> · 作业、实验与课程项目；<a href="https://github.com/ac0033/materials-sp25">materials-sp25</a> · 课程材料 fork</td></tr>
-<tr><td>Data 100 · 数据科学原理与技术</td><td><a href="https://github.com/ac0033/course-data100">course-data100</a> · Spring 2025 讲义、数据与项目配套材料</td></tr>
-<tr><td><strong>Stanford</strong></td><td>CS229 · 机器学习</td><td><a href="https://github.com/ac0033/course-cs229">course-cs229</a> · 2020 Summer 问题集，LaTeX 数学推导与 Python 实现</td></tr>
-<tr><td><strong>MIT</strong></td><td>6.S191 · 深度学习导论</td><td><a href="https://github.com/ac0033/introtodeeplearning">introtodeeplearning</a> · 课程实验 fork，含 PyTorch 音乐生成实践</td></tr>
 <tr><td><strong>CMU</strong></td><td>Introduction to Deep Learning</td><td><a href="https://github.com/ac0033/CMU-IDeeL.github.io">CMU-IDeeL.github.io</a> · 课程网站与历年材料的个人副本</td></tr>
 <tr><td><strong>University of Michigan</strong></td><td>EECS 498-007 / 598-005 · 深度学习计算机视觉</td><td><a href="https://github.com/ac0033/course-eecs498-umich">course-eecs498-umich</a> · A1–A6 作业实现，覆盖分类、检测、图像描述、Transformer 与生成模型</td></tr>
 </tbody>

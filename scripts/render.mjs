@@ -150,7 +150,7 @@ function render(doc) {
   }
   const segments = [
     renderHeader(doc.header),
-    renderWriting(doc.writing),
+    ...(doc.writing ? [renderWriting(doc.writing)] : []),
     ...(sectionSegments.length > 0 ? sectionSegments : [doc.preamble]),
     renderFooter(doc.footer),
   ];

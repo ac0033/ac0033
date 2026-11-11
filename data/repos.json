@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-10T11:25:12.486Z",
+  "generatedAt": "2026-11-11T00:47:51.263Z",
   "owner": "ac0033",
-  "count": 16,
+  "count": 13,
   "repos": {
     "CMU-IDeeL.github.io": {
       "name": "CMU-IDeeL.github.io",
@@ -10,15 +10,6 @@
       "archived": false,
       "fork": true,
       "readme_sha": "e097c6903ce0",
-      "release": null
-    },
-    "course-cs229": {
-      "name": "course-cs229",
-      "url": "https://github.com/ac0033/course-cs229",
-      "description": "Stanford CS229 Machine Learning 问题集个人作答：LaTeX 数学推导 + Python 实现，PS1 完成 16/26，持续更新",
-      "archived": false,
-      "fork": false,
-      "readme_sha": "91552a313c53",
       "release": null
     },
     "course-data8": {
@@ -75,15 +66,6 @@
       "readme_sha": "6cbacd1cff69",
       "release": null
     },
-    "introtodeeplearning": {
-      "name": "introtodeeplearning",
-      "url": "https://github.com/ac0033/introtodeeplearning",
-      "description": "Local solutions and reproducible environment for MIT 6.S191 Introduction to Deep Learning",
-      "archived": false,
-      "fork": false,
-      "readme_sha": "0c651a7374bf",
-      "release": null
-    },
     "learning_assistant_agent": {
       "name": "learning_assistant_agent",
       "url": "https://github.com/ac0033/learning_assistant_agent",
@@ -114,20 +96,11 @@
     "skills": {
       "name": "skills",
       "url": "https://github.com/ac0033/skills",
-      "description": "Agent 技能集合：clear-reporting、human-writing、structured-writing、white-box-explainer 与 Humanizer-zh",
+      "description": "面向 Claude Code、Codex 和其他 Agent 的产品开发工作流。一个入口，根据任务选择路线，推进需求、设计、开发、验证和交付。",
       "archived": false,
       "fork": false,
-      "readme_sha": "6f3e13a3cff6",
-      "release": null
-    },
-    "sp26-lab": {
-      "name": "sp26-lab",
-      "url": "https://github.com/ac0033/sp26-lab",
-      "description": "UC Berkeley CS 61C Spring 2026 实验材料的个人 fork：C、RISC-V 与数字电路",
-      "archived": false,
-      "fork": true,
-      "readme_sha": "4252038c37f8",
-      "release": null
+      "readme_sha": "1c542cc4c918",
+      "release": "product-dev-v0.2.1"
     },
     "white-box-explainer": {
       "name": "white-box-explainer",
