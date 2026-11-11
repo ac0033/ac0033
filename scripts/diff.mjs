@@ -180,7 +180,7 @@ for (const name of Object.keys(pub)) {
 }
 
 const articleFiles = new Set((profile.writing?.articles ?? []).map((a) => a.file));
-if (existsSync(ARTICLES)) {
+if (profile.writing && existsSync(ARTICLES)) {
   for (const f of readdirSync(ARTICLES).filter((f) => f.endsWith(".md"))) {
     const rel = `articles/${f}`;
     if (!articleFiles.has(rel)) {

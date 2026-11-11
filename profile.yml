@@ -16,13 +16,11 @@ owner: ac0033
 header:
   title: "YuanLumen's Garage 🛠️"
   taglines:
-    - "**做 AI 工具与产品，用数据解决问题，在开源课程中持续学习。**"
-    - "Building AI tools & products · Practicing data science · Learning in public"
+    - "**构建 AI 工具与产品，记录公开课学习实践。**"
   nav:
     - { text: "AI 工具", anchor: "ai-tools" }
     - { text: "AI 产品", anchor: "ai-products" }
-    - { text: "数据科学项目", anchor: "data-science" }
-    - { text: "开源课程", anchor: "open-courses" }
+    - { text: "AI 学习", anchor: "ai-learning" }
   stack: "Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills"
 
 # 状态枚举 → 展示文本。render 只接受这里的 key，Agent 也禁止自造状态。
@@ -34,73 +32,19 @@ status:
   archived: "📦 已归档"
   deprecated: "即将下线"
 
-writing:
-  heading: "✍️ 文章与思考 · Writing"
-  articles:
-    - file: "articles/2026-09-08-AI时代普通人的价值：从执行任务到解决问题-60be066b72dd.md"
-      title: "AI 时代普通人的价值：从执行任务到解决问题"
-      summary: "关于 AI 时代个人价值创造的思考。"
-    - file: "articles/让-Agent-可靠地干活：从单-Agent-到-AI-OS-的一条工程主线.md"
-      title: "让 Agent 可靠地干活：从单 Agent 到多 Agent，再到 AI OS"
-      summary: "从单 Agent 上下文管理，到多 Agent 协作与系统治理。"
-  footer: "观点与材料整理：YuanLumen。"
-
-preamble: "围绕 Agent 的上下文、记忆、知识与写作流程构建工具，也探索 AI 在文档阅读、课程学习和数据科学中的应用。这里整理公开项目与课程实践；尚未发布的项目先保留名称，后续补充。"
-
 sections:
   - id: ai-tools
     heading: "🛠️ AI 工具"
     blocks:
       - type: text
-        value: "让 Agent 更好地使用上下文、积累知识，并把工作过程变得可检查、可复用。"
-      - type: table
-        columns: ["项目", "解决什么问题", "主要内容"]
-        rows:
-          - [{ repo: dsh-ctm }, "看清并管理 Agent 上下文", "DeepSeek Harness 插件；上下文可视化、token 用量、编辑与回退、快照恢复"]
-          - [{ repo: agent-memory }, "让 agent 跨会话记住偏好、约定与踩过的坑", "证据锚定记忆：以原话为证据、读取只组织不裁决；长期 / 工作 / 短期三层 + 写入评价门；LoCoMo 42:33、60 题 58/60；MCP / Python / Skill 接入"]
-          - [{ repo: skills }, "把常用工作方法沉淀为 Agent 技能", "系统构思、讲解、汇报与中文写作；按任务提供规则、示例和检查程序"]
-      - type: heading3
-        value: "Skills · 精选示例"
-      - type: table
-        columns: ["技能", "用途", "亮点"]
-        rows:
-          - [{ url: "https://github.com/ac0033/skills/tree/main/systems-thinking", label: "systems-thinking" }, "组织项目计划、系统讲解与结构化写作", "统一用「层次 → 维度 → 板块 → 具体事项」组织，附框架、模板和示例"]
-          - [{ url: "https://github.com/ac0033/skills/tree/main/goal-driven-development", label: "goal-driven-development" }, "以终为始开发功能：先定目标和验收标准，再拆解问题、选方案", "借鉴论文与开源找思路；验证集迭代、封存测试集验收"]
-          - [{ url: "https://github.com/ac0033/skills/tree/main/data-science-project", label: "data-science-project" }, "数据科学项目的全周期规划、执行、验收与解释", "计划须用户批准；验收从实际产物独立核对，不复用执行时的中间结果"]
-          - [{ url: "https://github.com/ac0033/skills/tree/main/clear-reporting", label: "clear-reporting" }, "把已有结果整理成有依据、能核查的汇报", "附材料格式、示例与 Python 检查程序（含单元测试），可选插件包装"]
-          - [{ url: "https://github.com/ac0033/skills/tree/main/publish-private-project", label: "publish-private-project" }, "私有项目首次公开前的隐私与涉密核查、清理和发布配套", "核查清单细到「文件:行号」；全新历史，私有推送验证后再切公开"]
-          - [{ url: "https://github.com/ac0033/white-box-explainer", label: "white-box-explainer" }, "结合真实代码与数据讲清项目原理、执行过程和复算方法", "独立仓库，以 Git submodule 收录"]
-      - type: note
-        value: "<sub>上表只挑了几个示例，不是全部：`skills` 仓库现有 14 个技能，表中未列的 8 个为 cognitive-receiver（降低复杂讲解的理解负担）、human-writing 与 structured-writing（中文写作与结构）、submit、tidy-docs、synchronous（把技能同步到本机各 agent）、api（为项目暴露 plugin / skills / MCP / CLI / HTTP 接口）、Humanizer-zh（第三方 fork）；另有[语言风格 System Prompt](https://github.com/ac0033/skills/blob/main/语言风格%20System%20Prompt.md)。完整列表、来源与许可见 [skills](https://github.com/ac0033/skills)。</sub>"
+        value: "**[product-dev](https://github.com/ac0033/skills/tree/main/product-dev)** · 面向 Claude Code 和 Codex 的产品开发插件，按任务选择流程，覆盖需求、设计、开发、验证与交付。"
 
   - id: ai-products
     heading: "🚀 AI 产品"
-    blocks:
-      - type: text
-        value: "面向具体使用场景，把检索、文档与 Agent 能力组织成应用。"
-      - type: table
-        columns: ["项目", "场景与内容", "状态"]
-        rows:
-          - [{ repo: review-rag-agent }, "商品审核问答；角色可见性过滤、混合检索、重排与索引同步", { status: active }]
-          - [{ label: "PDFtranslator", link: false }, "—", { status: wip }]
-          - [{ repo: dsflow }, "数据科学项目全周期追踪平台（类似 MLflow + DVC，补状态与认知追踪）：计划、审批、数据变化、讲解与验收在网页上可检查；只读接入，项目文件为唯一事实来源；agent 经协议 / MCP / 命令行 / 终端 / Skill 接入", { status: preview }]
-          - [{ label: "ai_tutor", link: false }, "—", { status: wip }]
-          - [{ repo: learning_assistant_agent }, "开源课程 AI 助教；课程 PDF 上传、混合检索、中文讲解与英文术语保留", { status: deprecated }]
-      - type: note
-        value: "<sub>“公开预览”：代码与功能已公开，可在本机安装试用；多用户登录与服务器部署尚未完成，暂不提供在线服务。“待更新中”仅为项目名占位；公开后补充介绍与仓库入口。</sub>"
+    blocks: []
 
-  - id: data-science
-    heading: "📊 数据科学项目"
-    blocks:
-      - type: text
-        value: "从数据理解、建模到评估与交付，保留判断依据和可复查的过程。"
-      - type: table
-        columns: ["项目", "问题", "方法与产物"]
-        rows:
-          - [{ repo: wine-quality }, "根据 11 项理化指标预测葡萄酒 quality 评分", "红酒与白酒分别训练随机森林；包含数据核验、探索分析、模型比较、最终评估、可解释性与模型交付记录"]
-
-  - id: open-courses
-    heading: "📚 开源课程"
+  - id: ai-learning
+    heading: "📚 AI 学习"
     blocks:
       - type: text
         value: "公开课自学记录、个人作业实现与课程材料整理。按学校与课程展示，具体完成情况见各仓库。"
@@ -112,26 +56,10 @@ sections:
               - course: "CS 61A · 计算机程序的构造与解释"
                 repos:
                   - { repo: cs61a, text: "Python、Scheme、讨论与项目练习" }
-              - course: "CS 61C · 计算机体系结构"
-                repos:
-                  - { repo: sp26-lab, text: "Spring 2026 的 C、RISC-V 与数字电路实验" }
               - course: "Data 8 · 数据科学基础"
                 repos:
                   - { repo: course-data8, text: "作业、实验与课程项目" }
                   - { repo: materials-sp25, text: "课程材料 fork" }
-              - course: "Data 100 · 数据科学原理与技术"
-                repos:
-                  - { repo: course-data100, text: "Spring 2025 讲义、数据与项目配套材料" }
-          - school: "Stanford"
-            rows:
-              - course: "CS229 · 机器学习"
-                repos:
-                  - { repo: course-cs229, text: "2020 Summer 问题集，LaTeX 数学推导与 Python 实现" }
-          - school: "MIT"
-            rows:
-              - course: "6.S191 · 深度学习导论"
-                repos:
-                  - { repo: introtodeeplearning, text: "课程实验 fork，含 PyTorch 音乐生成实践" }
           - school: "CMU"
             rows:
               - course: "Introduction to Deep Learning"
