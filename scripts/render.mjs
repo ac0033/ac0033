@@ -76,7 +76,9 @@ function renderTable(block, ctx) {
 }
 
 function htmlRepoLink(entry, ctx) {
-  return `<a href="https://github.com/${ctx.owner}/${entry.repo}">${entry.label ?? entry.repo}</a>`;
+  // 课程说明页可用 url；公开仓库仍通过 repo 生成链接。
+  const url = entry.url ?? `https://github.com/${ctx.owner}/${entry.repo}`;
+  return `<a href="${url}">${entry.label ?? entry.repo}</a>`;
 }
 
 function renderHtmlTable(block, ctx) {
