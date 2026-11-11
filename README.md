@@ -16,7 +16,9 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 
 ## 🛠️ AI 工具
 
-**[product-dev](https://github.com/ac0033/skills/tree/main/product-dev)** · 面向 Claude Code 和 Codex 的产品开发插件，按任务选择流程，覆盖需求、设计、开发、验证与交付。
+| 工具 | 用途 |
+|---|---|
+| **[product-dev](https://github.com/ac0033/skills/tree/main/product-dev)** | 面向 Claude Code 和 Codex 的产品开发插件，按任务选择流程，覆盖需求、设计、开发、验证与交付。 |
 
 ---
 
