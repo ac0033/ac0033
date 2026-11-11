@@ -51,7 +51,9 @@ function homepageText(repo) {
       }
       if (b.type === "html-table") {
         for (const g of b.groups ?? []) {
+          if (g.repo === repo) hits.push(g.label ?? g.repo);
           for (const row of g.rows ?? []) {
+            if (row.repo === repo) hits.push(`${g.label ?? g.repo} | ${row.label ?? row.repo} | ${row.text ?? ""}`);
             if ((row.repos ?? []).some((r) => r.repo === repo)) hits.push(`${g.school} | ${row.course} | ${(row.repos ?? []).map((r) => r.repo).join("、")}`);
           }
         }
