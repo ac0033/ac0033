@@ -75,6 +75,10 @@ function renderTable(block, ctx) {
   return [head, sep, ...rows].join("\n");
 }
 
+function htmlRepoLink(entry, ctx) {
+  return `<a href="https://github.com/${ctx.owner}/${entry.repo}">${entry.label ?? entry.repo}</a>`;
+}
+
 function renderHtmlTable(block, ctx) {
   const head = `<tr>${block.columns.map((c) => `<th>${c}</th>`).join("")}</tr>`;
   const lines = [];
@@ -82,20 +86,24 @@ function renderHtmlTable(block, ctx) {
     group.rows.forEach((row, i) => {
       let tds = "";
       if (i === 0) {
+        const label = group.repo ? htmlRepoLink(group, ctx) : group.school;
         tds +=
           group.rows.length > 1
-            ? `<td rowspan="${group.rows.length}"><strong>${group.school}</strong></td>`
-            : `<td><strong>${group.school}</strong></td>`;
+            ? `<td rowspan="${group.rows.length}"><strong>${label}</strong></td>`
+            : `<td><strong>${label}</strong></td>`;
       }
-      tds += `<td>${row.course}</td>`;
-      const content = (row.repos ?? [])
-        .map((entry) => {
-          const label = entry.label ?? entry.repo;
-          const a = `<a href="https://github.com/${ctx.owner}/${entry.repo}">${label}</a>`;
-          return entry.text ? `${a} · ${entry.text}` : a;
-        })
-        .join("；");
-      tds += `<td>${content}</td>`;
+      if (row.repo) {
+        tds += `<td>${htmlRepoLink(row, ctx)}</td><td>${row.text ?? ""}</td>`;
+      } else {
+        tds += `<td>${row.course}</td>`;
+        const content = (row.repos ?? [])
+          .map((entry) => {
+            const a = htmlRepoLink(entry, ctx);
+            return entry.text ? `${a} · ${entry.text}` : a;
+          })
+          .join("；");
+        tds += `<td>${content}</td>`;
+      }
       lines.push(`<tr>${tds}</tr>`);
     });
   }
