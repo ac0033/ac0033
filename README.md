@@ -48,6 +48,7 @@ Python · TypeScript · PyTorch · LangGraph · MCP · RAG · Agent Skills
 <tr><td>Data 8 · 数据科学基础</td><td><a href="https://github.com/ac0033/course-data8">course-data8</a> · 作业、实验与课程项目；<a href="https://github.com/ac0033/materials-sp25">materials-sp25</a> · 课程材料 fork</td></tr>
 <tr><td><strong>CMU</strong></td><td>Introduction to Deep Learning</td><td><a href="https://github.com/ac0033/CMU-IDeeL.github.io">CMU-IDeeL.github.io</a> · 课程网站与历年材料的个人副本</td></tr>
 <tr><td><strong>University of Michigan</strong></td><td>EECS 498-007 / 598-005 · 深度学习计算机视觉</td><td><a href="https://github.com/ac0033/course-eecs498-umich">course-eecs498-umich</a> · A1–A6 作业实现，覆盖分类、检测、图像描述、Transformer 与生成模型</td></tr>
+<tr><td><strong>Stanford</strong></td><td>CS224N · 自然语言处理与深度学习</td><td><a href="docs/cs224n.md">查看说明</a> · 版权所限，不公开展示</td></tr>
 </tbody>
 </table>
 

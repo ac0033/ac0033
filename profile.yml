@@ -85,6 +85,11 @@ sections:
               - course: "EECS 498-007 / 598-005 · 深度学习计算机视觉"
                 repos:
                   - { repo: course-eecs498-umich, text: "A1–A6 作业实现，覆盖分类、检测、图像描述、Transformer 与生成模型" }
+          - school: "Stanford"
+            rows:
+              - course: "CS224N · 自然语言处理与深度学习"
+                repos:
+                  - { url: "docs/cs224n.md", label: "查看说明", text: "版权所限，不公开展示" }
       - type: note
         value: "<sub>个人学习仓库不代表课程官方；课程材料、第三方代码与个人实现的来源和许可见各仓库说明。</sub>"
 
