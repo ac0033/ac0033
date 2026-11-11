@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-11T00:47:51.263Z",
+  "generatedAt": "2026-11-11T06:57:26.623Z",
   "owner": "ac0033",
-  "count": 13,
+  "count": 14,
   "repos": {
     "CMU-IDeeL.github.io": {
       "name": "CMU-IDeeL.github.io",
@@ -93,14 +93,23 @@
       "readme_sha": "cedaece0f033",
       "release": null
     },
+    "product-dev": {
+      "name": "product-dev",
+      "url": "https://github.com/ac0033/product-dev",
+      "description": "Product Dev：面向 Claude Code、Codex 和 DeepSeek Harness 的产品开发插件，从需求、原型与架构到开发、测试、审查与交付。",
+      "archived": false,
+      "fork": false,
+      "readme_sha": "15be73bd7eec",
+      "release": "v0.2.5"
+    },
     "skills": {
       "name": "skills",
       "url": "https://github.com/ac0033/skills",
-      "description": "面向 Claude Code、Codex 和其他 Agent 的产品开发工作流。一个入口，根据任务选择路线，推进需求、设计、开发、验证和交付。",
+      "description": "面向 Claude Code、Codex、DeepSeek Harness 及其他 Agent 的工具与插件集合。各工具独立维护、按需安装，涵盖产品设计、软件工程与交付。",
       "archived": false,
       "fork": false,
-      "readme_sha": "1c542cc4c918",
-      "release": "product-dev-v0.2.1"
+      "readme_sha": "2eb2e0cdeab1",
+      "release": "product-dev-v0.2.4"
     },
     "white-box-explainer": {
       "name": "white-box-explainer",
