@@ -32,6 +32,16 @@ status:
   archived: "📦 已归档"
   deprecated: "即将下线"
 
+# 已确认暂不展示的公开仓库。其他未收录的公开仓库仍会触发同步提醒。
+unlisted_repos:
+  - dsflow
+  - dsh-ctm
+  - Humanizer-zh
+  - learning_assistant_agent
+  - LLMs-from-scratch
+  - white-box-explainer
+  - wine-quality
+
 sections:
   - id: ai-tools
     heading: "🛠️ AI 工具"

@@ -74,9 +74,10 @@ walk(profile);
 
 // ---- 计算漂移 ----
 const items = [];
+const unlisted = new Set(profile.unlisted_repos ?? []);
 
 for (const name of Object.keys(pub)) {
-  if (name === owner || Object.hasOwn(prev, name) || refs.has(name)) continue;
+  if (name === owner || unlisted.has(name) || refs.has(name)) continue;
   items.push({
     type: "repo_new",
     action: "semantic",
