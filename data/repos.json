@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T11:30:24.684Z",
+  "generatedAt": "2026-11-13T11:16:18.906Z",
   "owner": "ac0033",
   "count": 14,
   "repos": {
@@ -99,8 +99,8 @@
       "description": "Product Dev：面向 Claude Code、Codex 和 DeepSeek Harness 的产品开发插件，从需求、原型与架构到开发、测试、审查与交付。",
       "archived": false,
       "fork": false,
-      "readme_sha": "65ad969054cd",
-      "release": "v0.3.0"
+      "readme_sha": "1f89049846c7",
+      "release": "v0.3.2"
     },
     "skills": {
       "name": "skills",
@@ -108,7 +108,7 @@
       "description": "面向 Claude Code、Codex、DeepSeek Harness 及其他 Agent 的工具与插件集合。各工具独立维护、按需安装，涵盖产品设计、软件工程与交付。",
       "archived": false,
       "fork": false,
-      "readme_sha": "9bafc608a15e",
+      "readme_sha": "1373055b5337",
       "release": "product-dev-v0.2.4"
     },
     "white-box-explainer": {
