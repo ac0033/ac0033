@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T11:16:18.906Z",
+  "generatedAt": "2026-11-24T13:58:21.979Z",
   "owner": "ac0033",
   "count": 14,
   "repos": {
@@ -99,7 +99,7 @@
       "description": "Product Dev：面向 Claude Code、Codex 和 DeepSeek Harness 的产品开发插件，从需求、原型与架构到开发、测试、审查与交付。",
       "archived": false,
       "fork": false,
-      "readme_sha": "1f89049846c7",
+      "readme_sha": "629c968bdfa3",
       "release": "v0.3.2"
     },
     "skills": {
